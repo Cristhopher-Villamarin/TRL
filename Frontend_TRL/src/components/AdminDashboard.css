@@ -2,10 +2,13 @@
     min-height: 100vh;
     position: relative;
     overflow-x: hidden;
+    background: #f3f4f6;
+    /* Gray 100 */
 }
 
 .admin-dashboard {
-    background: linear-gradient(135deg, #0f0c29 0%, #302b63 50%, #24243e 100%);
+    background: #f3f4f6;
+    /* Gray 100 */
 }
 
 .dashboard-background {
@@ -13,6 +16,8 @@
     inset: 0;
     overflow: hidden;
     pointer-events: none;
+    background: #f3f4f6;
+    z-index: -1;
 }
 
 .dashboard-nav {
@@ -22,10 +27,10 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding: 20px 40px;
-    background: rgba(255, 255, 255, 0.05);
-    backdrop-filter: blur(20px);
-    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    padding: 16px 40px;
+    background: #ffffff;
+    border-bottom: 1px solid #e5e7eb;
+    box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1);
 }
 
 .nav-brand {
@@ -35,105 +40,87 @@
 }
 
 .nav-logo {
-    width: 48px;
-    height: 48px;
+    width: 40px;
+    height: 40px;
     display: flex;
     align-items: center;
     justify-content: center;
-    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-    border-radius: 12px;
-    font-size: 18px;
+    background: #065f46;
+    /* Emerald 800 */
+    border-radius: 8px;
+    font-size: 16px;
     font-weight: 800;
     color: white;
 }
 
 .nav-brand span {
-    font-size: 20px;
+    font-size: 18px;
     font-weight: 700;
-    color: white;
+    color: #1f2937;
+    /* Gray 800 */
 }
 
 .logout-button {
     display: flex;
     align-items: center;
     gap: 8px;
-    padding: 12px 24px;
-    background: rgba(255, 255, 255, 0.1);
-    border: 1px solid rgba(255, 255, 255, 0.2);
-    border-radius: 10px;
-    color: white;
+    padding: 10px 20px;
+    background: white;
+    border: 1px solid #e5e7eb;
+    border-radius: 8px;
+    color: #374151;
+    /* Gray 700 */
     font-size: 14px;
     font-weight: 600;
     cursor: pointer;
-    transition: all 0.3s ease;
+    transition: all 0.2s ease;
 }
 
 .logout-button:hover {
-    background: rgba(255, 255, 255, 0.15);
-    transform: translateY(-2px);
+    background: #f9fafb;
+    border-color: #d1d5db;
+    color: #1f2937;
 }
 
 .dashboard-content {
     position: relative;
     max-width: 1400px;
     margin: 0 auto;
-    padding: 60px 40px;
+    padding: 40px;
 }
 
 .welcome-section {
-    text-align: center;
-    margin-bottom: 60px;
+    text-align: left;
+    margin-bottom: 40px;
+    padding-bottom: 20px;
+    border-bottom: 1px solid #e5e7eb;
 }
 
 .welcome-badge {
     display: inline-block;
-    padding: 8px 20px;
-    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-    border-radius: 20px;
+    padding: 4px 12px;
+    background: #065f46;
+    /* Emerald 800 */
+    border-radius: 16px;
     color: white;
-    font-size: 14px;
+    font-size: 12px;
     font-weight: 600;
-    margin-bottom: 16px;
-    animation: fadeInDown 0.6s ease-out;
-}
-
-@keyframes fadeInDown {
-    from {
-        opacity: 0;
-        transform: translateY(-20px);
-    }
-
-    to {
-        opacity: 1;
-        transform: translateY(0);
-    }
+    margin-bottom: 12px;
 }
 
 .welcome-section h1 {
-    font-size: 48px;
+    font-size: 36px;
     font-weight: 800;
-    color: white;
-    margin: 0 0 12px 0;
-    animation: fadeInUp 0.6s ease-out 0.1s both;
-}
-
-@keyframes fadeInUp {
-    from {
-        opacity: 0;
-        transform: translateY(20px);
-    }
-
-    to {
-        opacity: 1;
-        transform: translateY(0);
-    }
+    color: #1f2937;
+    /* Gray 800 */
+    margin: 0 0 8px 0;
 }
 
 .user-email {
-    font-size: 18px;
-    color: rgba(255, 255, 255, 0.7);
+    font-size: 16px;
+    color: #6b7280;
+    /* Gray 500 */
     margin: 0;
-    animation: fadeInUp 0.6s ease-out 0.2s both;
 }
 
 .stats-grid {
@@ -146,86 +133,83 @@
 .stat-card {
     display: flex;
     gap: 20px;
-    padding: 32px;
-    background: rgba(255, 255, 255, 0.05);
-    backdrop-filter: blur(20px);
-    border-radius: 20px;
-    border: 1px solid rgba(255, 255, 255, 0.1);
-    transition: all 0.3s ease;
-    animation: fadeInUp 0.6s ease-out both;
-}
-
-.stat-card:nth-child(1) {
-    animation-delay: 0.3s;
-}
-
-.stat-card:nth-child(2) {
-    animation-delay: 0.4s;
-}
-
-.stat-card:nth-child(3) {
-    animation-delay: 0.5s;
+    padding: 24px;
+    background: #ffffff;
+    border-radius: 12px;
+    border: 1px solid #e5e7eb;
+    transition: all 0.2s ease;
+    box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
 }
 
 .stat-card:hover {
-    transform: translateY(-4px);
-    box-shadow: 0 12px 40px rgba(0, 0, 0, 0.3);
+    transform: translateY(-2px);
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+    border-color: #10b981;
 }
 
 .stat-icon {
-    width: 64px;
-    height: 64px;
+    width: 56px;
+    height: 56px;
     display: flex;
     align-items: center;
     justify-content: center;
-    border-radius: 16px;
+    border-radius: 12px;
     flex-shrink: 0;
 }
 
 .stat-icon.purple {
-    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    background: #ecfdf5;
+    /* Emerald 50 */
+    color: #059669;
+    /* Emerald 600 */
 }
 
 .stat-icon.blue {
-    background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%);
+    background: #f0f9ff;
+    /* Sky 50 */
+    color: #0284c7;
+    /* Sky 600 */
 }
 
 .stat-icon.green {
-    background: linear-gradient(135deg, #43e97b 0%, #38f9d7 100%);
-}
-
-.stat-icon svg {
-    color: white;
+    background: #f0fdf4;
+    /* Green 50 */
+    color: #16a34a;
+    /* Green 600 */
 }
 
 .stat-info h3 {
-    font-size: 14px;
+    font-size: 13px;
     font-weight: 600;
-    color: rgba(255, 255, 255, 0.7);
-    margin: 0 0 8px 0;
+    color: #6b7280;
+    /* Gray 500 */
+    margin: 0 0 4px 0;
     text-transform: uppercase;
     letter-spacing: 0.5px;
 }
 
 .stat-value {
-    font-size: 36px;
+    font-size: 28px;
     font-weight: 800;
-    color: white;
+    color: #1f2937;
+    /* Gray 800 */
     margin: 0 0 4px 0;
 }
 
 .stat-label {
     font-size: 13px;
-    color: rgba(255, 255, 255, 0.6);
+    color: #9ca3af;
+    /* Gray 400 */
     margin: 0;
 }
 
 .admin-features h2 {
-    font-size: 32px;
+    font-size: 24px;
     font-weight: 700;
-    color: white;
-    margin: 0 0 32px 0;
-    text-align: center;
+    color: #1f2937;
+    /* Gray 800 */
+    margin: 0 0 24px 0;
+    text-align: left;
 }
 
 .features-grid {
@@ -235,63 +219,63 @@
 }
 
 .feature-card {
-    padding: 32px;
-    background: rgba(255, 255, 255, 0.05);
-    backdrop-filter: blur(20px);
-    border-radius: 20px;
-    border: 1px solid rgba(255, 255, 255, 0.1);
-    text-align: center;
-    transition: all 0.3s ease;
+    padding: 24px;
+    background: #ffffff;
+    border-radius: 12px;
+    border: 1px solid #e5e7eb;
+    text-align: left;
+    transition: all 0.2s ease;
     cursor: pointer;
-    animation: fadeInUp 0.6s ease-out both;
-}
-
-.feature-card:nth-child(1) {
-    animation-delay: 0.6s;
-}
-
-.feature-card:nth-child(2) {
-    animation-delay: 0.7s;
-}
-
-.feature-card:nth-child(3) {
-    animation-delay: 0.8s;
-}
-
-.feature-card:nth-child(4) {
-    animation-delay: 0.9s;
+    box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
+    display: flex;
+    align-items: flex-start;
+    gap: 16px;
 }
 
 .feature-card:hover {
-    transform: translateY(-8px);
-    background: rgba(255, 255, 255, 0.08);
-    box-shadow: 0 12px 40px rgba(0, 0, 0, 0.3);
+    transform: translateY(-2px);
+    border-color: #10b981;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
 }
 
 .feature-icon {
-    width: 80px;
-    height: 80px;
-    margin: 0 auto 20px;
+    width: 48px;
+    height: 48px;
+    margin: 0;
     display: flex;
     align-items: center;
     justify-content: center;
-    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-    border-radius: 20px;
-    color: white;
+    background: #f3f4f6;
+    /* Gray 100 */
+    border-radius: 10px;
+    color: #374151;
+    /* Gray 700 */
+    flex-shrink: 0;
+}
+
+.feature-card:hover .feature-icon {
+    background: #ecfdf5;
+    color: #059669;
+}
+
+.feature-card div {
+    flex: 1;
 }
 
 .feature-card h3 {
-    font-size: 20px;
+    font-size: 16px;
     font-weight: 700;
-    color: white;
-    margin: 0 0 12px 0;
+    color: #1f2937;
+    /* Gray 800 */
+    margin: 0 0 4px 0;
 }
 
 .feature-card p {
     font-size: 14px;
-    color: rgba(255, 255, 255, 0.7);
+    color: #6b7280;
+    /* Gray 500 */
     margin: 0;
-    line-height: 1.6;
+    line-height: 1.5;
 }
 
 @media (max-width: 768px) {
@@ -300,11 +284,11 @@
     }
 
     .dashboard-content {
-        padding: 40px 20px;
+        padding: 24px 20px;
     }
 
     .welcome-section h1 {
-        font-size: 32px;
+        font-size: 28px;
     }
 
     .stats-grid {
