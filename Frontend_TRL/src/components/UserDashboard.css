@@ -1,0 +1,184 @@
+.user-dashboard {
+    background: linear-gradient(135deg, #1a1a2e 0%, #16213e 50%, #0f3460 100%);
+}
+
+.quick-actions {
+    margin-bottom: 60px;
+}
+
+.quick-actions h2 {
+    font-size: 28px;
+    font-weight: 700;
+    color: white;
+    margin: 0 0 24px 0;
+}
+
+.actions-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 24px;
+}
+
+.action-card {
+    padding: 32px;
+    background: rgba(255, 255, 255, 0.05);
+    backdrop-filter: blur(20px);
+    border-radius: 20px;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    text-align: center;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    animation: fadeInUp 0.6s ease-out both;
+}
+
+.action-card:nth-child(1) {
+    animation-delay: 0.3s;
+}
+
+.action-card:nth-child(2) {
+    animation-delay: 0.4s;
+}
+
+.action-card:nth-child(3) {
+    animation-delay: 0.5s;
+}
+
+.action-card:hover {
+    transform: translateY(-8px);
+    background: rgba(255, 255, 255, 0.08);
+    box-shadow: 0 12px 40px rgba(0, 0, 0, 0.3);
+}
+
+.action-icon {
+    width: 80px;
+    height: 80px;
+    margin: 0 auto 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%);
+    border-radius: 20px;
+    color: white;
+}
+
+.action-card h3 {
+    font-size: 20px;
+    font-weight: 700;
+    color: white;
+    margin: 0 0 12px 0;
+}
+
+.action-card p {
+    font-size: 14px;
+    color: rgba(255, 255, 255, 0.7);
+    margin: 0;
+}
+
+.user-info-section {
+    margin-bottom: 60px;
+}
+
+.user-info-section h2 {
+    font-size: 28px;
+    font-weight: 700;
+    color: white;
+    margin: 0 0 24px 0;
+}
+
+.info-card {
+    padding: 40px;
+    background: rgba(255, 255, 255, 0.05);
+    backdrop-filter: blur(20px);
+    border-radius: 20px;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    animation: fadeInUp 0.6s ease-out 0.6s both;
+}
+
+.info-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 32px;
+}
+
+.info-item label {
+    display: block;
+    font-size: 12px;
+    font-weight: 600;
+    color: rgba(255, 255, 255, 0.6);
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    margin-bottom: 8px;
+}
+
+.info-item p {
+    font-size: 18px;
+    font-weight: 600;
+    color: white;
+    margin: 0;
+}
+
+.role-badge {
+    display: inline-block;
+    padding: 6px 16px;
+    background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%);
+    border-radius: 20px;
+    font-size: 14px !important;
+    font-weight: 700 !important;
+}
+
+.recent-activity h2 {
+    font-size: 28px;
+    font-weight: 700;
+    color: white;
+    margin: 0 0 24px 0;
+}
+
+.activity-card {
+    padding: 60px 40px;
+    background: rgba(255, 255, 255, 0.05);
+    backdrop-filter: blur(20px);
+    border-radius: 20px;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    animation: fadeInUp 0.6s ease-out 0.7s both;
+}
+
+.empty-state {
+    text-align: center;
+    color: rgba(255, 255, 255, 0.5);
+}
+
+.empty-state svg {
+    margin-bottom: 20px;
+    opacity: 0.5;
+}
+
+.empty-state h3 {
+    font-size: 20px;
+    font-weight: 600;
+    color: rgba(255, 255, 255, 0.7);
+    margin: 0 0 12px 0;
+}
+
+.empty-state p {
+    font-size: 14px;
+    color: rgba(255, 255, 255, 0.5);
+    margin: 0;
+}
+
+@media (max-width: 768px) {
+    .actions-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .info-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .info-card {
+        padding: 24px;
+    }
+
+    .activity-card {
+        padding: 40px 24px;
+    }
+}
