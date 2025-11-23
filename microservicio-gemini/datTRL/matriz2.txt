@@ -1,0 +1,77 @@
+TRL 1 - Observación de principios básicos
+| Evidencia | Puntaje | Importancia | Justificación | Límite inferior |
+| Publicación en Scopus (Q1–Q2) | 20 | Alta | Revistas confiables de prestigio internacional. | 1 |
+| Publicación en Scopus (Q3–Q4) | 15 | Media | Útiles pero con menor reconocimiento. | 1 |
+| Publicación en Scielo o Redalyc | 10 | Media | Apoya el proyecto, prestigio regional. | 1 |
+| Referencias bibliográficas (>10) | 10 | Media | Dan sustento a la investigación realizada. | 10 |
+| Documentación técnica del principio | 5 | Alta | Explica la base conceptual del desarrollo. | 1 |
+
+TRL 2 — Formulación del concepto
+| Evidencia | Puntaje | Importancia | Justificación | Límite inferior |
+| Artículo aplicado en Scopus (Q1–Q2) | 20 | Alta | Demuestra aplicación exitosa de la idea. | 1 |
+| Documento de formulación del concepto | 10 | Alta | Explica claramente qué se quiere hacer y cómo. | 1 |
+| Relación con necesidad institucional/nacional | 10 | Media | Evidencia resolución de un problema real. | 1 |
+| Validación de pares (académicos) | 5 | Media | Revisión experta externa. | 1 |
+
+TRL 3 — Prueba experimental del concepto
+| Evidencia | Puntaje | Importancia | Justificación | Límite inferior |
+| Simulación funcional Proteus | 5 | Alta | Integración software/hardware profesional. | 1 |
+| Simulación MATLAB/Simulink | 5 | Alta | Validación numérica rigurosa. | 1 |
+| Simulación Tinkercad | 4 | Media | Adecuado para pruebas tempranas. | 1 |
+| Simuladores genéricos web | 3 | Baja | Solo para principios funcionales mínimos. | 1 |
+| Prototipo funcional en laboratorio | 10 | Media | Muestra capacidad real de construcción. | 1 |
+| Registro de pruebas (bitácora validada) | 5 | Alta | Fechas, errores, ajustes, validaciones firmadas. | 1 |
+| Bitácora simple parcial | 3 | Media | Registros incompletos sin validación formal. | 1 |
+| Registro informal sin estructura | 2 | Media | Válido solo si evidencia experimentación. | 1 |
+
+TRL 4 — Validación de componentes en laboratorio
+| Evidencia | Puntaje | Importancia | Justificación | Límite inferior |
+| Video técnico del prototipo en operación parcial | 8 | Alta | Evidencia directa del funcionamiento inicial. | 2 |
+| Fotografías del armado estructurado | 5 | Media | Respaldo visual verificable del armado. | 10 |
+| Descripción funcional por subsistema | 7 | Alta | Permite evaluar funcionamiento por partes. | 1 |
+| Simulaciones técnicas (MATLAB/Simulink) | 5 | Media | Predicen fallas estructurales y riesgos. | 1 |
+| Informe de resultados cuantitativos | 4 | Alta | Gráficas y comparaciones de parámetros. | 1 |
+| Informe académico completo | 3 | Media | Evidencia rigurosidad técnica y metodológica. | 1 |
+| Fichas técnicas / diagramas funcionales | 3 | Media | Mejoran trazabilidad técnica. | 2 |
+
+TRL 5 — Integración y validación en entorno relevante
+| Evidencia | Puntaje | Importancia | Justificación | Límite inferior |
+| Informe de evaluaciones y correcciones | 10 | Alta | Evidencia clave del avance al sistema real. | 1 |
+| Video técnico del sistema funcional (laboratorio) | 10 | Alta | Valida correcciones y mejoras. | 2 |
+| Pruebas funcionales completas | 5 | Media | Soporte de validación sistemática con mediciones. | 1 |
+
+TRL 6 — Demostración funcional en entorno simulado
+| Evidencia | Puntaje | Importancia | Justificación | Límite inferior |
+| Informe de análisis de resultados | 5 | Media | Permite interpretar eficiencia del sistema. | 1 |
+| Manuales de operación | 10 | Media | Establecen criterios de funcionamiento. | 1 |
+| Documento de condiciones del entorno simulado | 10 | Alta | Aporta contexto del entorno validado. | 1 |
+| Funcionamiento del sistema en laboratorio especializado | 13 | Alta | Valida operación bajo condiciones simuladas reales. | 1 |
+| Funcionamiento del sistema en software de realidad virtual | 12 | Alta | Valida operación en entorno virtual. | 1 |
+| Matriz de indicadores contrastada con límites | 10 | Alta | Evalúa funcionamiento en condiciones próximas a las reales. | 1 |
+| Informe de retroalimentación técnica | 5 | Media | Permite mejoras según expertos externos. | 1 |
+| Video técnico con variables ambientales | 10 | Media | Documenta operación con temperatura, presión, etc. | 1 |
+
+TRL 7 — Demostración en entorno real
+| Evidencia | Puntaje | Importancia | Justificación | Límite inferior |
+| Actas de prueba de campo | 20 | Alta | Documentación formal de pruebas en entorno real. | 1 |
+| Carta de validación externa | 10 | Media | Respaldo institucional externo. | 1 |
+| Entrevistas con usuarios reales | 2 | Media | Miden utilidad, facilidad y percepción del usuario. | 1 |
+
+TRL 8 — Sistema completo y validado
+| Evidencia | Puntaje | Importancia | Justificación | Límite inferior |
+| Informe análisis entrevistas | 3 | Media | Claridad en comprensión del prototipo. | 3 |
+| Informe con métricas reales | 10 | Alta | Datos reales de uso, fallas y desempeño. | 1 |
+| Retroalimentación final de usuarios | 5 | Media | Identifica fallas y mejoras antes de implementación. | 1 |
+| Manual técnico | 20 | Alta | Permite instalar, operar y mantener la tecnología. | 1 |
+| Informes de impacto | 10 | Media | Evalúan resultados medibles en contexto real. | 1 |
+| Carta de aceptación de usuario | 20 | Alta | Aprobación formal del destinatario final. | 1 |
+
+TRL 9 — Despliegue y comercialización
+| Evidencia | Puntaje | Importancia | Justificación | Límite inferior |
+| Carta de adopción | 20 | Alta | Evidencia uso continuo y sostenido del sistema. | 1 |
+| Contrato o convenio de uso | 15 | Alta | Evidencia jurídica de uso externo. | 1 |
+| Análisis de mercado con segmentación | 5 | Media | Demuestra valor económico real. | 1 |
+| Estrategias de precios y estructura de costos | 4 | Media | Define costos, producción y venta. | 1 |
+| Informe de convenios validables | 4 | Media | Convenios formales para adopción. | 2 |
+| Estudio exploratorio de nuevos mercados | 10 | Alta | Viabilidad de expansión. | 1 |
+| Contacto formal (intención, citas, acuerdos) | 10 | Alta | Acuerdos comerciales regionales, nacionales o internacionales. | 3 |

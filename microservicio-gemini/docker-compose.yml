@@ -1,0 +1,23 @@
+version: '3.8'
+
+services:
+  microservicio-gemini:
+    build: .
+    container_name: microservicio-trl
+    ports:
+      - "5000:5000"
+    environment:
+      - PROJECT_ID=${PROJECT_ID}
+      - REGION=${REGION}
+      - MODEL_ID=${MODEL_ID}
+      - API_HOST=0.0.0.0
+      - API_PORT=5000
+      - DEBUG=${DEBUG:-False}
+      - ALLOWED_ORIGINS=${ALLOWED_ORIGINS}
+    volumes:
+      # Montar credenciales de Google Cloud (ADC)
+      # Ajusta la ruta según tu sistema operativo
+      # Windows: C:\Users\<usuario>\.config\gcloud
+      # Linux/Mac: ~/.config/gcloud
+      - $HOME/.config/gcloud:/root/.config/gcloud:ro
+    restart: unless-stopped
