@@ -3,6 +3,9 @@ import Login from './components/Login';
 import Register from './components/Register';
 import AdminDashboard from './components/AdminDashboard';
 import UserDashboard from './components/UserDashboard';
+import CreateProject from './components/CreateProject';
+import ProjectList from './components/ProjectList';
+import ProjectDetail from './components/ProjectDetail';
 import { authService } from './services/authService';
 import './App.css';
 
@@ -41,6 +44,30 @@ function App() {
           element={
             <ProtectedRoute>
               <UserDashboard />
+            </ProtectedRoute>
+          }
+        />
+        <Route
+          path="/usuario/crear-proyecto"
+          element={
+            <ProtectedRoute>
+              <CreateProject />
+            </ProtectedRoute>
+          }
+        />
+        <Route
+          path="/usuario/mis-proyectos"
+          element={
+            <ProtectedRoute>
+              <ProjectList />
+            </ProtectedRoute>
+          }
+        />
+        <Route
+          path="/usuario/proyecto/:id"
+          element={
+            <ProtectedRoute>
+              <ProjectDetail />
             </ProtectedRoute>
           }
         />

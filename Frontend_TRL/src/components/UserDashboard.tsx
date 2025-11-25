@@ -47,13 +47,13 @@ export default function UserDashboard() {
                 <div className="welcome-section">
                     <div className="welcome-badge">Usuario</div>
                     <h1>Hola, {user.nombre} {user.apellido}</h1>
-                    <p className="user-email">{user.correo}</p>
+
                 </div>
 
                 <div className="quick-actions">
                     <h2>Acciones Rápidas</h2>
                     <div className="actions-grid">
-                        <button className="action-card">
+                        <button className="action-card" onClick={() => navigate('/usuario/crear-proyecto')}>
                             <div className="action-icon">
                                 <svg width="32" height="32" viewBox="0 0 24 24" fill="none">
                                     <path d="M19 13H13V19H11V13H5V11H11V5H13V11H19V13Z" fill="currentColor" />
@@ -63,7 +63,7 @@ export default function UserDashboard() {
                             <p>Crear un nuevo proyecto TRL</p>
                         </button>
 
-                        <button className="action-card">
+                        <button className="action-card" onClick={() => navigate('/usuario/mis-proyectos')}>
                             <div className="action-icon">
                                 <svg width="32" height="32" viewBox="0 0 24 24" fill="none">
                                     <path d="M20 6H12L10 4H4C2.9 4 2.01 4.9 2.01 6L2 18C2 19.1 2.9 20 4 20H20C21.1 20 22 19.1 22 18V8C22 6.9 21.1 6 20 6ZM20 18H4V8H20V18Z" fill="currentColor" />
@@ -97,30 +97,12 @@ export default function UserDashboard() {
                                 <label>Correo Electrónico</label>
                                 <p>{user.correo}</p>
                             </div>
-                            <div className="info-item">
-                                <label>Rol</label>
-                                <p className="role-badge">{user.rol}</p>
-                            </div>
-                            <div className="info-item">
-                                <label>ID de Usuario</label>
-                                <p>#{user.idUsuario}</p>
-                            </div>
+
                         </div>
                     </div>
                 </div>
 
-                <div className="recent-activity">
-                    <h2>Actividad Reciente</h2>
-                    <div className="activity-card">
-                        <div className="empty-state">
-                            <svg width="64" height="64" viewBox="0 0 24 24" fill="none">
-                                <path d="M12 2C6.48 2 2 6.48 2 12C2 17.52 6.48 22 12 22C17.52 22 22 17.52 22 12C22 6.48 17.52 2 12 2ZM13 17H11V15H13V17ZM13 13H11V7H13V13Z" fill="currentColor" />
-                            </svg>
-                            <h3>No hay actividad reciente</h3>
-                            <p>Comienza creando tu primer proyecto TRL</p>
-                        </div>
-                    </div>
-                </div>
+
             </div>
         </div>
     );
