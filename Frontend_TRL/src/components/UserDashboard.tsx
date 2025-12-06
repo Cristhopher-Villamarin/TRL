@@ -1,10 +1,13 @@
 import { useEffect, useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { authService, type AuthResponse } from '../services/authService';
+import { nivelTRLService, type NivelTRLResponse } from '../services/nivelTRLService';
 import './UserDashboard.css';
 
 export default function UserDashboard() {
     const [user, setUser] = useState<AuthResponse | null>(null);
+    const [niveles, setNiveles] = useState<NivelTRLResponse[]>([]);
+    const [loadingNiveles, setLoadingNiveles] = useState(true);
     const navigate = useNavigate();
 
     useEffect(() => {
@@ -14,7 +17,20 @@ export default function UserDashboard() {
             return;
         }
         setUser(currentUser);
+        loadNiveles();
     }, [navigate]);
+
+    const loadNiveles = async () => {
+        try {
+            setLoadingNiveles(true);
+            const data = await nivelTRLService.getAll();
+            setNiveles(data.sort((a, b) => a.numNivel - b.numNivel));
+        } catch (err) {
+            console.error('Error loading niveles:', err);
+        } finally {
+            setLoadingNiveles(false);
+        }
+    };
 
     const handleLogout = () => {
         authService.logout();
@@ -82,6 +98,51 @@ export default function UserDashboard() {
                             <h3>Reportes</h3>
                             <p>Ver mis reportes TRL</p>
                         </button>
+                    </div>
+                </div>
+
+                <div className="trl-levels-section">
+                    <h2>Niveles TRL</h2>
+                    <div className="trl-table-card">
+                        {loadingNiveles ? (
+                            <div className="table-loading">
+                                <div className="spinner-small"></div>
+                                <p>Cargando niveles TRL...</p>
+                            </div>
+                        ) : niveles.length === 0 ? (
+                            <div className="table-empty">
+                                <p>No hay niveles TRL disponibles</p>
+                            </div>
+                        ) : (
+                            <div className="table-container">
+                                <table className="trl-table">
+                                    <thead>
+                                        <tr>
+                                            <th>Nivel</th>
+                                            <th>Nombre</th>
+                                            <th>Entorno</th>
+                                            <th>Fase de Desarrollo</th>
+                                            <th>Puntaje Mínimo</th>
+                                            <th>Descripción</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        {niveles.map((nivel) => (
+                                            <tr key={nivel.idNivel}>
+                                                <td>
+                                                    <span className="nivel-badge">TRL {nivel.numNivel}</span>
+                                                </td>
+                                                <td className="nivel-name">{nivel.nomNivel}</td>
+                                                <td>{nivel.entorno}</td>
+                                                <td>{nivel.faseDesarrollo}</td>
+                                                <td className="text-center">{nivel.puntajeMinimo}</td>
+                                                <td className="descripcion-cell">{nivel.descripcionTrl}</td>
+                                            </tr>
+                                        ))}
+                                    </tbody>
+                                </table>
+                            </div>
+                        )}
                     </div>
                 </div>
 

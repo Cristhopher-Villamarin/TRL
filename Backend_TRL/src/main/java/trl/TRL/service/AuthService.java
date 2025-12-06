@@ -15,47 +15,50 @@ import trl.TRL.security.JwtTokenProvider;
 @Service
 @RequiredArgsConstructor
 public class AuthService {
-    
+
     private final UsuarioRepository usuarioRepository;
     private final RolRepository rolRepository;
     private final PasswordEncoder passwordEncoder;
     private final JwtTokenProvider jwtTokenProvider;
-    
+
     public AuthResponse login(LoginRequest request) {
         Usuario usuario = usuarioRepository.findByCorreo(request.getCorreo())
                 .orElseThrow(() -> new RuntimeException("Usuario no encontrado"));
-        
+
         if (!passwordEncoder.matches(request.getContrasena(), usuario.getContrasena())) {
             throw new RuntimeException("Contraseña incorrecta");
         }
-        
+
         if (!"Activa".equals(usuario.getCuentaActiva())) {
             throw new RuntimeException("Cuenta inactiva");
         }
-        
+
         String token = jwtTokenProvider.generateToken(
-                usuario.getCorreo(), 
-                usuario.getRol().getNombreRol()
-        );
-        
+                usuario.getCorreo(),
+                usuario.getRol().getNombreRol());
+
         return new AuthResponse(
                 token,
                 usuario.getIdUsuario(),
                 usuario.getNombre(),
                 usuario.getApellido(),
                 usuario.getCorreo(),
-                usuario.getRol().getNombreRol()
-        );
+                usuario.getRol().getNombreRol());
     }
-    
+
     public AuthResponse register(RegisterRequest request) {
         if (usuarioRepository.existsByCorreo(request.getCorreo())) {
             throw new RuntimeException("El correo ya está registrado");
         }
-        
-        Rol rolUsuario = rolRepository.findByNombreRol("USUARIO")
-                .orElseThrow(() -> new RuntimeException("Rol USUARIO no encontrado"));
-        
+
+        // Si no se especifica rol, usar "USUARIO" por defecto
+        String nombreRol = (request.getRol() != null && !request.getRol().isEmpty())
+                ? request.getRol()
+                : "USUARIO";
+
+        Rol rolUsuario = rolRepository.findByNombreRol(nombreRol)
+                .orElseThrow(() -> new RuntimeException("Rol " + nombreRol + " no encontrado"));
+
         Usuario nuevoUsuario = new Usuario();
         nuevoUsuario.setNombre(request.getNombre());
         nuevoUsuario.setApellido(request.getApellido());
@@ -63,21 +66,19 @@ public class AuthService {
         nuevoUsuario.setContrasena(passwordEncoder.encode(request.getContrasena()));
         nuevoUsuario.setRol(rolUsuario);
         nuevoUsuario.setCuentaActiva("Activa");
-        
+
         Usuario usuarioGuardado = usuarioRepository.save(nuevoUsuario);
-        
+
         String token = jwtTokenProvider.generateToken(
                 usuarioGuardado.getCorreo(),
-                usuarioGuardado.getRol().getNombreRol()
-        );
-        
+                usuarioGuardado.getRol().getNombreRol());
+
         return new AuthResponse(
                 token,
                 usuarioGuardado.getIdUsuario(),
                 usuarioGuardado.getNombre(),
                 usuarioGuardado.getApellido(),
                 usuarioGuardado.getCorreo(),
-                usuarioGuardado.getRol().getNombreRol()
-        );
+                usuarioGuardado.getRol().getNombreRol());
     }
 }

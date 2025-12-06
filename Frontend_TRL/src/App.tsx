@@ -6,6 +6,8 @@ import UserDashboard from './components/UserDashboard';
 import CreateProject from './components/CreateProject';
 import ProjectList from './components/ProjectList';
 import ProjectDetail from './components/ProjectDetail';
+import TRLLevelManagement from './components/TRLLevelManagement';
+import CriteriaManagement from './components/CriteriaManagement';
 import { authService } from './services/authService';
 import './App.css';
 
@@ -36,6 +38,22 @@ function App() {
           element={
             <ProtectedRoute adminOnly>
               <AdminDashboard />
+            </ProtectedRoute>
+          }
+        />
+        <Route
+          path="/admin/niveles-trl"
+          element={
+            <ProtectedRoute adminOnly>
+              <TRLLevelManagement />
+            </ProtectedRoute>
+          }
+        />
+        <Route
+          path="/admin/criterios"
+          element={
+            <ProtectedRoute adminOnly>
+              <CriteriaManagement />
             </ProtectedRoute>
           }
         />

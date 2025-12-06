@@ -12,4 +12,5 @@ public class RegisterRequest {
     private String apellido;
     private String correo;
     private String contrasena;
+    private String rol; // Opcional: si no se especifica, se asigna "USUARIO" por defecto
 }
