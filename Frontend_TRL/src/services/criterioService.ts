@@ -1,7 +1,7 @@
 import axios from 'axios';
 import { authService } from './authService';
 
-const API_URL = 'http://localhost:8080/api/criterios';
+const API_URL = 'http://localhost:8081/api/criterios';
 
 export interface CriterioRequest {
     idNivel: number;

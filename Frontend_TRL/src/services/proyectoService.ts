@@ -1,7 +1,7 @@
 import axios from 'axios';
 import { authService } from './authService';
 
-const API_URL = 'http://localhost:8080/api/proyectos';
+const API_URL = 'http://localhost:8081/api/proyectos';
 
 export interface ProyectoRequest {
   nombreProyecto: string;
@@ -71,5 +71,12 @@ export const proyectoService = {
     await axios.delete(`${API_URL}/${id}`, {
       headers: getAuthHeader()
     });
+  },
+
+  async analizarProyecto(id: number): Promise<string> {
+    const response = await axios.post(`${API_URL}/${id}/analizar`, {}, {
+      headers: getAuthHeader()
+    });
+    return response.data;
   }
 };

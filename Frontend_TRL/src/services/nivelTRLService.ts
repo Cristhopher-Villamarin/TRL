@@ -1,7 +1,7 @@
 import axios from 'axios';
 import { authService } from './authService';
 
-const API_URL = 'http://localhost:8080/api/niveles-trl';
+const API_URL = 'http://localhost:8081/api/niveles-trl';
 
 export interface NivelTRLRequest {
     numNivel: number;

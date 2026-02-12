@@ -61,4 +61,18 @@ public class EvidenciaController {
             return ResponseEntity.badRequest().body(e.getMessage());
         }
     }
+
+    @GetMapping("/evidencias/{id}/archivo")
+    public ResponseEntity<byte[]> descargarEvidencia(@PathVariable Integer id) {
+        try {
+            trl.TRL.model.Evidencia evidencia = evidenciaService.obtenerArchivoEvidencia(id);
+            return ResponseEntity.ok()
+                    .header(org.springframework.http.HttpHeaders.CONTENT_DISPOSITION,
+                            "attachment; filename=\"" + evidencia.getArchivoNombre() + "\"")
+                    .contentType(org.springframework.http.MediaType.parseMediaType(evidencia.getArchivoTipo()))
+                    .body(evidencia.getArchivoDatos());
+        } catch (Exception e) {
+            return ResponseEntity.badRequest().build();
+        }
+    }
 }

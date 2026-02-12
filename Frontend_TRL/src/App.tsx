@@ -8,6 +8,7 @@ import ProjectList from './components/ProjectList';
 import ProjectDetail from './components/ProjectDetail';
 import TRLLevelManagement from './components/TRLLevelManagement';
 import CriteriaManagement from './components/CriteriaManagement';
+import TRLReportsView from './components/TRLReportsView';
 import { authService } from './services/authService';
 import './App.css';
 
@@ -86,6 +87,14 @@ function App() {
           element={
             <ProtectedRoute>
               <ProjectDetail />
+            </ProtectedRoute>
+          }
+        />
+        <Route
+          path="/usuario/reportes-trl"
+          element={
+            <ProtectedRoute>
+              <TRLReportsView />
             </ProtectedRoute>
           }
         />

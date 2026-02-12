@@ -1,13 +1,13 @@
 import axios from 'axios';
 import { authService } from './authService';
 
-const API_URL = 'http://localhost:8080/api';
+const API_URL = 'http://localhost:8081/api';
 
 export interface EvidenciaResponse {
     idEvidencia: number;
     idProyecto: number;
     nombreProyecto: string;
-    url: string;
+    archivoNombre: string;
     descripcion: string;
     fechaCarga: string;
     estadoEvidencia: string;
@@ -61,4 +61,19 @@ export const evidenciaService = {
             headers: getAuthHeader(),
         });
     },
+
+    async downloadEvidencia(idEvidencia: number, fileName: string): Promise<void> {
+        const response = await axios.get(`${API_URL}/evidencias/${idEvidencia}/archivo`, {
+            headers: getAuthHeader(),
+            responseType: 'blob',
+        });
+
+        const url = window.URL.createObjectURL(new Blob([response.data]));
+        const link = document.createElement('a');
+        link.href = url;
+        link.setAttribute('download', fileName);
+        document.body.appendChild(link);
+        link.click();
+        link.remove();
+    }
 };

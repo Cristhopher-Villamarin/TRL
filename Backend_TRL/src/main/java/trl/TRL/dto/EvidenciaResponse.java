@@ -13,7 +13,7 @@ public class EvidenciaResponse {
     private Integer idEvidencia;
     private Integer idProyecto;
     private String nombreProyecto;
-    private String url;
+    private String archivoNombre;
     private String descripcion;
     private LocalDate fechaCarga;
     private String estadoEvidencia;

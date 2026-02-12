@@ -1,0 +1,437 @@
+2026-02-11 21:41:04 | INFO     | __main__:main:25 - Fase 1: Procesamiento de documento y extracción de recursos...
+2026-02-11 21:41:05 | ERROR    | src.storage.database:get_session:41 - Error en transacción: (psycopg2.errors.UndefinedTable) relation "extracted_images" does not exist
+LINE 1: INSERT INTO extracted_images (document_id, image_path, page_...
+                    ^
+
+[SQL: INSERT INTO extracted_images (document_id, image_path, page_number, width, height, format, ocr_text, created_at) SELECT p0::INTEGER, p1::VARCHAR, p2::INTEGER, p3::INTEGER, p4::INTEGER, p5::VARCHAR, p6::TEXT, p7::TIMESTAMP WITHOUT TIME ZONE FROM (VALU ... 19299 characters truncated ... 6, p7, sen_counter) ORDER BY sen_counter RETURNING extracted_images.id, extracted_images.id AS id__1]
+[parameters: {'height__0': None, 'ocr_text__0': None, 'created_at__0': datetime.datetime(2026, 2, 12, 2, 41, 5, 391280), 'page_number__0': None, 'document_id__0': 3, 'format__0': None, 'width__0': None, 'image_path__0': 'C:\\Users\\jcnaz\\OneDrive\\Documentos\\TRLCodigo\\Github\\TRL\\Backend_TRL\\storage\\temp\\doc_3_images\\1770864059513_TrabajoUIC_Solano_Erick_FINAL_page1_img1.png', 'height__1': None, 'ocr_text__1': None, 'created_at__1': datetime.datetime(2026, 2, 12, 2, 41, 5, 391280), 'page_number__1': None, 'document_id__1': 3, 'format__1': None, 'width__1': None, 'image_path__1': 'C:\\Users\\jcnaz\\OneDrive\\Documentos\\TRLCodigo\\Github\\TRL\\Backend_TRL\\storage\\temp\\doc_3_images\\1770864059513_TrabajoUIC_Solano_Erick_FINAL_page3_img1.jpeg', 'height__2': None, 'ocr_text__2': None, 'created_at__2': datetime.datetime(2026, 2, 12, 2, 41, 5, 391280), 'page_number__2': None, 'document_id__2': 3, 'format__2': None, 'width__2': None, 'image_path__2': 'C:\\Users\\jcnaz\\OneDrive\\Documentos\\TRLCodigo\\Github\\TRL\\Backend_TRL\\storage\\temp\\doc_3_images\\1770864059513_TrabajoUIC_Solano_Erick_FINAL_page4_img1.jpeg', 'height__3': None, 'ocr_text__3': None, 'created_at__3': datetime.datetime(2026, 2, 12, 2, 41, 5, 391280), 'page_number__3': None, 'document_id__3': 3, 'format__3': None, 'width__3': None, 'image_path__3': 'C:\\Users\\jcnaz\\OneDrive\\Documentos\\TRLCodigo\\Github\\TRL\\Backend_TRL\\storage\\temp\\doc_3_images\\1770864059513_TrabajoUIC_Solano_Erick_FINAL_page5_img1.jpeg', 'height__4': None, 'ocr_text__4': None, 'created_at__4': datetime.datetime(2026, 2, 12, 2, 41, 5, 391280), 'page_number__4': None, 'document_id__4': 3, 'format__4': None, 'width__4': None, 'image_path__4': 'C:\\Users\\jcnaz\\OneDrive\\Documentos\\TRLCodigo\\Github\\TRL\\Backend_TRL\\storage\\temp\\doc_3_images\\1770864059513_TrabajoUIC_Solano_Erick_FINAL_page20_img1.png', 'height__5': None, 'ocr_text__5': None, 'created_at__5': datetime.datetime(2026, 2, 12, 2, 41, 5, 391280), 'page_number__5': None, 'document_id__5': 3, 'format__5': None, 'width__5': None, 'image_path__5': 'C:\\Users\\jcnaz\\OneDrive\\Documentos\\TRLCodigo\\Github\\TRL\\Backend_TRL\\storage\\temp\\doc_3_images\\1770864059513_TrabajoUIC_Solano_Erick_FINAL_page22_img1.jpeg', 'height__6': None, 'ocr_text__6': None ... 900 parameters truncated ... 'width__118': None, 'image_path__118': 'C:\\Users\\jcnaz\\OneDrive\\Documentos\\TRLCodigo\\Github\\TRL\\Backend_TRL\\storage\\temp\\doc_3_images\\1770864059513_TrabajoUIC_Solano_Erick_FINAL_page100_img2.jpeg', 'height__119': None, 'ocr_text__119': None, 'created_at__119': datetime.datetime(2026, 2, 12, 2, 41, 5, 391280), 'page_number__119': None, 'document_id__119': 3, 'format__119': None, 'width__119': None, 'image_path__119': 'C:\\Users\\jcnaz\\OneDrive\\Documentos\\TRLCodigo\\Github\\TRL\\Backend_TRL\\storage\\temp\\doc_3_images\\1770864059513_TrabajoUIC_Solano_Erick_FINAL_page100_img3.jpeg', 'height__120': None, 'ocr_text__120': None, 'created_at__120': datetime.datetime(2026, 2, 12, 2, 41, 5, 391280), 'page_number__120': None, 'document_id__120': 3, 'format__120': None, 'width__120': None, 'image_path__120': 'C:\\Users\\jcnaz\\OneDrive\\Documentos\\TRLCodigo\\Github\\TRL\\Backend_TRL\\storage\\temp\\doc_3_images\\1770864059513_TrabajoUIC_Solano_Erick_FINAL_page100_img4.jpeg', 'height__121': None, 'ocr_text__121': None, 'created_at__121': datetime.datetime(2026, 2, 12, 2, 41, 5, 391280), 'page_number__121': None, 'document_id__121': 3, 'format__121': None, 'width__121': None, 'image_path__121': 'C:\\Users\\jcnaz\\OneDrive\\Documentos\\TRLCodigo\\Github\\TRL\\Backend_TRL\\storage\\temp\\doc_3_images\\1770864059513_TrabajoUIC_Solano_Erick_FINAL_page102_img1.jpeg', 'height__122': None, 'ocr_text__122': None, 'created_at__122': datetime.datetime(2026, 2, 12, 2, 41, 5, 391280), 'page_number__122': None, 'document_id__122': 3, 'format__122': None, 'width__122': None, 'image_path__122': 'C:\\Users\\jcnaz\\OneDrive\\Documentos\\TRLCodigo\\Github\\TRL\\Backend_TRL\\storage\\temp\\doc_3_images\\1770864059513_TrabajoUIC_Solano_Erick_FINAL_page102_img2.jpeg', 'height__123': None, 'ocr_text__123': None, 'created_at__123': datetime.datetime(2026, 2, 12, 2, 41, 5, 391280), 'page_number__123': None, 'document_id__123': 3, 'format__123': None, 'width__123': None, 'image_path__123': 'C:\\Users\\jcnaz\\OneDrive\\Documentos\\TRLCodigo\\Github\\TRL\\Backend_TRL\\storage\\temp\\doc_3_images\\1770864059513_TrabajoUIC_Solano_Erick_FINAL_page102_img3.jpeg', 'height__124': None, 'ocr_text__124': None, 'created_at__124': datetime.datetime(2026, 2, 12, 2, 41, 5, 391280), 'page_number__124': None, 'document_id__124': 3, 'format__124': None, 'width__124': None, 'image_path__124': 'C:\\Users\\jcnaz\\OneDrive\\Documentos\\TRLCodigo\\Github\\TRL\\Backend_TRL\\storage\\temp\\doc_3_images\\1770864059513_TrabajoUIC_Solano_Erick_FINAL_page102_img4.jpeg'}]
+(Background on this error at: https://sqlalche.me/e/20/f405)
+2026-02-11 21:41:05 | ERROR    | __main__:main:48 - Error durante el procesamiento/análisis: (psycopg2.errors.UndefinedTable) relation "extracted_images" does not exist
+LINE 1: INSERT INTO extracted_images (document_id, image_path, page_...
+                    ^
+
+[SQL: INSERT INTO extracted_images (document_id, image_path, page_number, width, height, format, ocr_text, created_at) SELECT p0::INTEGER, p1::VARCHAR, p2::INTEGER, p3::INTEGER, p4::INTEGER, p5::VARCHAR, p6::TEXT, p7::TIMESTAMP WITHOUT TIME ZONE FROM (VALU ... 19299 characters truncated ... 6, p7, sen_counter) ORDER BY sen_counter RETURNING extracted_images.id, extracted_images.id AS id__1]
+[parameters: {'height__0': None, 'ocr_text__0': None, 'created_at__0': datetime.datetime(2026, 2, 12, 2, 41, 5, 391280), 'page_number__0': None, 'document_id__0': 3, 'format__0': None, 'width__0': None, 'image_path__0': 'C:\\Users\\jcnaz\\OneDrive\\Documentos\\TRLCodigo\\Github\\TRL\\Backend_TRL\\storage\\temp\\doc_3_images\\1770864059513_TrabajoUIC_Solano_Erick_FINAL_page1_img1.png', 'height__1': None, 'ocr_text__1': None, 'created_at__1': datetime.datetime(2026, 2, 12, 2, 41, 5, 391280), 'page_number__1': None, 'document_id__1': 3, 'format__1': None, 'width__1': None, 'image_path__1': 'C:\\Users\\jcnaz\\OneDrive\\Documentos\\TRLCodigo\\Github\\TRL\\Backend_TRL\\storage\\temp\\doc_3_images\\1770864059513_TrabajoUIC_Solano_Erick_FINAL_page3_img1.jpeg', 'height__2': None, 'ocr_text__2': None, 'created_at__2': datetime.datetime(2026, 2, 12, 2, 41, 5, 391280), 'page_number__2': None, 'document_id__2': 3, 'format__2': None, 'width__2': None, 'image_path__2': 'C:\\Users\\jcnaz\\OneDrive\\Documentos\\TRLCodigo\\Github\\TRL\\Backend_TRL\\storage\\temp\\doc_3_images\\1770864059513_TrabajoUIC_Solano_Erick_FINAL_page4_img1.jpeg', 'height__3': None, 'ocr_text__3': None, 'created_at__3': datetime.datetime(2026, 2, 12, 2, 41, 5, 391280), 'page_number__3': None, 'document_id__3': 3, 'format__3': None, 'width__3': None, 'image_path__3': 'C:\\Users\\jcnaz\\OneDrive\\Documentos\\TRLCodigo\\Github\\TRL\\Backend_TRL\\storage\\temp\\doc_3_images\\1770864059513_TrabajoUIC_Solano_Erick_FINAL_page5_img1.jpeg', 'height__4': None, 'ocr_text__4': None, 'created_at__4': datetime.datetime(2026, 2, 12, 2, 41, 5, 391280), 'page_number__4': None, 'document_id__4': 3, 'format__4': None, 'width__4': None, 'image_path__4': 'C:\\Users\\jcnaz\\OneDrive\\Documentos\\TRLCodigo\\Github\\TRL\\Backend_TRL\\storage\\temp\\doc_3_images\\1770864059513_TrabajoUIC_Solano_Erick_FINAL_page20_img1.png', 'height__5': None, 'ocr_text__5': None, 'created_at__5': datetime.datetime(2026, 2, 12, 2, 41, 5, 391280), 'page_number__5': None, 'document_id__5': 3, 'format__5': None, 'width__5': None, 'image_path__5': 'C:\\Users\\jcnaz\\OneDrive\\Documentos\\TRLCodigo\\Github\\TRL\\Backend_TRL\\storage\\temp\\doc_3_images\\1770864059513_TrabajoUIC_Solano_Erick_FINAL_page22_img1.jpeg', 'height__6': None, 'ocr_text__6': None ... 900 parameters truncated ... 'width__118': None, 'image_path__118': 'C:\\Users\\jcnaz\\OneDrive\\Documentos\\TRLCodigo\\Github\\TRL\\Backend_TRL\\storage\\temp\\doc_3_images\\1770864059513_TrabajoUIC_Solano_Erick_FINAL_page100_img2.jpeg', 'height__119': None, 'ocr_text__119': None, 'created_at__119': datetime.datetime(2026, 2, 12, 2, 41, 5, 391280), 'page_number__119': None, 'document_id__119': 3, 'format__119': None, 'width__119': None, 'image_path__119': 'C:\\Users\\jcnaz\\OneDrive\\Documentos\\TRLCodigo\\Github\\TRL\\Backend_TRL\\storage\\temp\\doc_3_images\\1770864059513_TrabajoUIC_Solano_Erick_FINAL_page100_img3.jpeg', 'height__120': None, 'ocr_text__120': None, 'created_at__120': datetime.datetime(2026, 2, 12, 2, 41, 5, 391280), 'page_number__120': None, 'document_id__120': 3, 'format__120': None, 'width__120': None, 'image_path__120': 'C:\\Users\\jcnaz\\OneDrive\\Documentos\\TRLCodigo\\Github\\TRL\\Backend_TRL\\storage\\temp\\doc_3_images\\1770864059513_TrabajoUIC_Solano_Erick_FINAL_page100_img4.jpeg', 'height__121': None, 'ocr_text__121': None, 'created_at__121': datetime.datetime(2026, 2, 12, 2, 41, 5, 391280), 'page_number__121': None, 'document_id__121': 3, 'format__121': None, 'width__121': None, 'image_path__121': 'C:\\Users\\jcnaz\\OneDrive\\Documentos\\TRLCodigo\\Github\\TRL\\Backend_TRL\\storage\\temp\\doc_3_images\\1770864059513_TrabajoUIC_Solano_Erick_FINAL_page102_img1.jpeg', 'height__122': None, 'ocr_text__122': None, 'created_at__122': datetime.datetime(2026, 2, 12, 2, 41, 5, 391280), 'page_number__122': None, 'document_id__122': 3, 'format__122': None, 'width__122': None, 'image_path__122': 'C:\\Users\\jcnaz\\OneDrive\\Documentos\\TRLCodigo\\Github\\TRL\\Backend_TRL\\storage\\temp\\doc_3_images\\1770864059513_TrabajoUIC_Solano_Erick_FINAL_page102_img2.jpeg', 'height__123': None, 'ocr_text__123': None, 'created_at__123': datetime.datetime(2026, 2, 12, 2, 41, 5, 391280), 'page_number__123': None, 'document_id__123': 3, 'format__123': None, 'width__123': None, 'image_path__123': 'C:\\Users\\jcnaz\\OneDrive\\Documentos\\TRLCodigo\\Github\\TRL\\Backend_TRL\\storage\\temp\\doc_3_images\\1770864059513_TrabajoUIC_Solano_Erick_FINAL_page102_img3.jpeg', 'height__124': None, 'ocr_text__124': None, 'created_at__124': datetime.datetime(2026, 2, 12, 2, 41, 5, 391280), 'page_number__124': None, 'document_id__124': 3, 'format__124': None, 'width__124': None, 'image_path__124': 'C:\\Users\\jcnaz\\OneDrive\\Documentos\\TRLCodigo\\Github\\TRL\\Backend_TRL\\storage\\temp\\doc_3_images\\1770864059513_TrabajoUIC_Solano_Erick_FINAL_page102_img4.jpeg'}]
+(Background on this error at: https://sqlalche.me/e/20/f405)
+Traceback (most recent call last):
+
+  File "C:\Users\jcnaz\AppData\Local\Programs\Python\Python311\Lib\site-packages\sqlalchemy\engine\base.py", line 2125, in _exec_insertmany_context
+    dialect.do_execute(
+    │       └ <function DefaultDialect.do_execute at 0x0000024A00B95D00>
+    └ <sqlalchemy.dialects.postgresql.psycopg2.PGDialect_psycopg2 object at 0x0000024A03A67890>
+  File "C:\Users\jcnaz\AppData\Local\Programs\Python\Python311\Lib\site-packages\sqlalchemy\engine\default.py", line 952, in do_execute
+    cursor.execute(statement, parameters)
+    │      │       │          └ {'height__0': None, 'ocr_text__0': None, 'created_at__0': datetime.datetime(2026, 2, 12, 2, 41, 5, 391280), 'page_number__0':...
+    │      │       └ 'INSERT INTO extracted_images (document_id, image_path, page_number, width, height, format, ocr_text, created_at) SELECT p0::...
+    │      └ <method 'execute' of 'psycopg2.extensions.cursor' objects>
+    └ <cursor object at 0x0000024A04C4DA80; closed: -1>
+
+psycopg2.errors.UndefinedTable: relation "extracted_images" does not exist
+LINE 1: INSERT INTO extracted_images (document_id, image_path, page_...
+                    ^
+
+
+
+The above exception was the direct cause of the following exception:
+
+
+Traceback (most recent call last):
+
+  File "C:\Users\jcnaz\OneDrive\Documentos\TRLCodigo\Github\TRL\Backend_TRL\python_scripts\analyze_main.py", line 52, in <module>
+    main()
+    └ <function main at 0x0000024A7C512840>
+
+> File "C:\Users\jcnaz\OneDrive\Documentos\TRLCodigo\Github\TRL\Backend_TRL\python_scripts\analyze_main.py", line 29, in main
+    document_id = processor.process_document(pdf_path)
+                  │         │                └ WindowsPath('C:/Users/jcnaz/OneDrive/Documentos/TRLCodigo/Github/TRL/Backend_TRL/storage/uploads/1770864059513_TrabajoUIC_Sol...
+                  │         └ <function DocumentProcessor.process_document at 0x0000024A7EB21EE0>
+                  └ <src.processors.document_processor.DocumentProcessor object at 0x0000024A0333F5D0>
+
+  File "C:\Users\jcnaz\OneDrive\Documentos\TRLCodigo\Github\TRL\Backend_TRL\python_scripts\src\processors\document_processor.py", line 30, in process_document
+    with db_manager.get_session() as session:
+         │          │                └ <sqlalchemy.orm.session.Session object at 0x0000024A04BA5890>
+         │          └ <function DatabaseManager.get_session at 0x0000024A01190A40>
+         └ <src.storage.database.DatabaseManager object at 0x0000024A01171ED0>
+
+  File "C:\Users\jcnaz\AppData\Local\Programs\Python\Python311\Lib\contextlib.py", line 144, in __exit__
+    next(self.gen)
+         │    └ <generator object DatabaseManager.get_session at 0x0000024A03A61120>
+         └ <contextlib._GeneratorContextManager object at 0x0000024A03A79D10>
+
+  File "C:\Users\jcnaz\OneDrive\Documentos\TRLCodigo\Github\TRL\Backend_TRL\python_scripts\src\storage\database.py", line 38, in get_session
+    session.commit()
+    │       └ <function Session.commit at 0x0000024A01051EE0>
+    └ <sqlalchemy.orm.session.Session object at 0x0000024A04BA5890>
+
+  File "C:\Users\jcnaz\AppData\Local\Programs\Python\Python311\Lib\site-packages\sqlalchemy\orm\session.py", line 2030, in commit
+    trans.commit(_to_root=True)
+    │     └ <function SessionTransaction.commit at 0x0000024A01050EA0>
+    └ <sqlalchemy.orm.session.SessionTransaction object at 0x0000024A04AF6210>
+  File "<string>", line 2, in commit
+  File "C:\Users\jcnaz\AppData\Local\Programs\Python\Python311\Lib\site-packages\sqlalchemy\orm\state_changes.py", line 137, in _go
+    ret_value = fn(self, *arg, **kw)
+                │  │      │      └ {'_to_root': True}
+                │  │      └ ()
+                │  └ <sqlalchemy.orm.session.SessionTransaction object at 0x0000024A04AF6210>
+                └ <function SessionTransaction.commit at 0x0000024A01050E00>
+  File "C:\Users\jcnaz\AppData\Local\Programs\Python\Python311\Lib\site-packages\sqlalchemy\orm\session.py", line 1311, in commit
+    self._prepare_impl()
+    │    └ <function SessionTransaction._prepare_impl at 0x0000024A01050CC0>
+    └ <sqlalchemy.orm.session.SessionTransaction object at 0x0000024A04AF6210>
+  File "<string>", line 2, in _prepare_impl
+  File "C:\Users\jcnaz\AppData\Local\Programs\Python\Python311\Lib\site-packages\sqlalchemy\orm\state_changes.py", line 137, in _go
+    ret_value = fn(self, *arg, **kw)
+                │  │      │      └ {}
+                │  │      └ ()
+                │  └ <sqlalchemy.orm.session.SessionTransaction object at 0x0000024A04AF6210>
+                └ <function SessionTransaction._prepare_impl at 0x0000024A01050C20>
+  File "C:\Users\jcnaz\AppData\Local\Programs\Python\Python311\Lib\site-packages\sqlalchemy\orm\session.py", line 1286, in _prepare_impl
+    self.session.flush()
+    │    │       └ <function Session.flush at 0x0000024A01060E00>
+    │    └ <sqlalchemy.orm.session.Session object at 0x0000024A04BA5890>
+    └ <sqlalchemy.orm.session.SessionTransaction object at 0x0000024A04AF6210>
+  File "C:\Users\jcnaz\AppData\Local\Programs\Python\Python311\Lib\site-packages\sqlalchemy\orm\session.py", line 4331, in flush
+    self._flush(objects)
+    │    │      └ None
+    │    └ <function Session._flush at 0x0000024A01060FE0>
+    └ <sqlalchemy.orm.session.Session object at 0x0000024A04BA5890>
+  File "C:\Users\jcnaz\AppData\Local\Programs\Python\Python311\Lib\site-packages\sqlalchemy\orm\session.py", line 4466, in _flush
+    with util.safe_reraise():
+         │    └ <class 'sqlalchemy.util.langhelpers.safe_reraise'>
+         └ <module 'sqlalchemy.util' from 'C:\\Users\\jcnaz\\AppData\\Local\\Programs\\Python\\Python311\\Lib\\site-packages\\sqlalchemy...
+  File "C:\Users\jcnaz\AppData\Local\Programs\Python\Python311\Lib\site-packages\sqlalchemy\util\langhelpers.py", line 224, in __exit__
+    raise exc_value.with_traceback(exc_tb)
+          │         │              └ <traceback object at 0x0000024A04FEBC80>
+          │         └ <method 'with_traceback' of 'BaseException' objects>
+          └ ProgrammingError('(psycopg2.errors.UndefinedTable) relation "extracted_images" does not exist\nLINE 1: INSERT INTO extracted_...
+  File "C:\Users\jcnaz\AppData\Local\Programs\Python\Python311\Lib\site-packages\sqlalchemy\orm\session.py", line 4427, in _flush
+    flush_context.execute()
+    │             └ <function UOWTransaction.execute at 0x0000024A00FE05E0>
+    └ <sqlalchemy.orm.unitofwork.UOWTransaction object at 0x0000024A04C0BF10>
+  File "C:\Users\jcnaz\AppData\Local\Programs\Python\Python311\Lib\site-packages\sqlalchemy\orm\unitofwork.py", line 466, in execute
+    rec.execute(self)
+    │   │       └ <sqlalchemy.orm.unitofwork.UOWTransaction object at 0x0000024A04C0BF10>
+    │   └ <function SaveUpdateAll.execute at 0x0000024A00FE1120>
+    └ SaveUpdateAll(Mapper[ExtractedImage(extracted_images)])
+  File "C:\Users\jcnaz\AppData\Local\Programs\Python\Python311\Lib\site-packages\sqlalchemy\orm\unitofwork.py", line 642, in execute
+    util.preloaded.orm_persistence.save_obj(
+    │    │         │               └ <function save_obj at 0x0000024A00FE1E40>
+    │    │         └ <module 'sqlalchemy.orm.persistence' from 'C:\\Users\\jcnaz\\AppData\\Local\\Programs\\Python\\Python311\\Lib\\site-packages\...
+    │    └ <module 'sqlalchemy.util.preloaded' from 'C:\\Users\\jcnaz\\AppData\\Local\\Programs\\Python\\Python311\\Lib\\site-packages\\...
+    └ <module 'sqlalchemy.util' from 'C:\\Users\\jcnaz\\AppData\\Local\\Programs\\Python\\Python311\\Lib\\site-packages\\sqlalchemy...
+  File "C:\Users\jcnaz\AppData\Local\Programs\Python\Python311\Lib\site-packages\sqlalchemy\orm\persistence.py", line 93, in save_obj
+    _emit_insert_statements(
+    └ <function _emit_insert_statements at 0x0000024A01026700>
+  File "C:\Users\jcnaz\AppData\Local\Programs\Python\Python311\Lib\site-packages\sqlalchemy\orm\persistence.py", line 1143, in _emit_insert_statements
+    result = connection.execute(
+             │          └ <function Connection.execute at 0x0000024A00AB9A80>
+             └ <sqlalchemy.engine.base.Connection object at 0x0000024A04BF9FD0>
+  File "C:\Users\jcnaz\AppData\Local\Programs\Python\Python311\Lib\site-packages\sqlalchemy\engine\base.py", line 1419, in execute
+    return meth(
+           └ <bound method ClauseElement._execute_on_connection of <sqlalchemy.sql.dml.Insert object at 0x0000024A04C17610>>
+  File "C:\Users\jcnaz\AppData\Local\Programs\Python\Python311\Lib\site-packages\sqlalchemy\sql\elements.py", line 527, in _execute_on_connection
+    return connection._execute_clauseelement(
+           │          └ <function Connection._execute_clauseelement at 0x0000024A00AB9DA0>
+           └ <sqlalchemy.engine.base.Connection object at 0x0000024A04BF9FD0>
+  File "C:\Users\jcnaz\AppData\Local\Programs\Python\Python311\Lib\site-packages\sqlalchemy\engine\base.py", line 1641, in _execute_clauseelement
+    ret = self._execute_context(
+          │    └ <function Connection._execute_context at 0x0000024A00AB9F80>
+          └ <sqlalchemy.engine.base.Connection object at 0x0000024A04BF9FD0>
+  File "C:\Users\jcnaz\AppData\Local\Programs\Python\Python311\Lib\site-packages\sqlalchemy\engine\base.py", line 1844, in _execute_context
+    return self._exec_insertmany_context(dialect, context)
+           │    │                        │        └ <sqlalchemy.dialects.postgresql.psycopg2.PGExecutionContext_psycopg2 object at 0x0000024A04C5A550>
+           │    │                        └ <sqlalchemy.dialects.postgresql.psycopg2.PGDialect_psycopg2 object at 0x0000024A03A67890>
+           │    └ <function Connection._exec_insertmany_context at 0x0000024A00ABA0C0>
+           └ <sqlalchemy.engine.base.Connection object at 0x0000024A04BF9FD0>
+  File "C:\Users\jcnaz\AppData\Local\Programs\Python\Python311\Lib\site-packages\sqlalchemy\engine\base.py", line 2133, in _exec_insertmany_context
+    self._handle_dbapi_exception(
+    │    └ <function Connection._handle_dbapi_exception at 0x0000024A00ABA2A0>
+    └ <sqlalchemy.engine.base.Connection object at 0x0000024A04BF9FD0>
+  File "C:\Users\jcnaz\AppData\Local\Programs\Python\Python311\Lib\site-packages\sqlalchemy\engine\base.py", line 2363, in _handle_dbapi_exception
+    raise sqlalchemy_exception.with_traceback(exc_info[2]) from e
+          │                    │              │                 └ UndefinedTable('relation "extracted_images" does not exist\nLINE 1: INSERT INTO extracted_images (document_id, image_path, pa...
+          │                    │              └ (<class 'psycopg2.errors.UndefinedTable'>, UndefinedTable('relation "extracted_images" does not exist\nLINE 1: INSERT INTO ex...
+          │                    └ <method 'with_traceback' of 'BaseException' objects>
+          └ ProgrammingError('(psycopg2.errors.UndefinedTable) relation "extracted_images" does not exist\nLINE 1: INSERT INTO extracted_...
+  File "C:\Users\jcnaz\AppData\Local\Programs\Python\Python311\Lib\site-packages\sqlalchemy\engine\base.py", line 2125, in _exec_insertmany_context
+    dialect.do_execute(
+    │       └ <function DefaultDialect.do_execute at 0x0000024A00B95D00>
+    └ <sqlalchemy.dialects.postgresql.psycopg2.PGDialect_psycopg2 object at 0x0000024A03A67890>
+  File "C:\Users\jcnaz\AppData\Local\Programs\Python\Python311\Lib\site-packages\sqlalchemy\engine\default.py", line 952, in do_execute
+    cursor.execute(statement, parameters)
+    │      │       │          └ {'height__0': None, 'ocr_text__0': None, 'created_at__0': datetime.datetime(2026, 2, 12, 2, 41, 5, 391280), 'page_number__0':...
+    │      │       └ 'INSERT INTO extracted_images (document_id, image_path, page_number, width, height, format, ocr_text, created_at) SELECT p0::...
+    │      └ <method 'execute' of 'psycopg2.extensions.cursor' objects>
+    └ <cursor object at 0x0000024A04C4DA80; closed: -1>
+
+sqlalchemy.exc.ProgrammingError: (psycopg2.errors.UndefinedTable) relation "extracted_images" does not exist
+LINE 1: INSERT INTO extracted_images (document_id, image_path, page_...
+                    ^
+
+[SQL: INSERT INTO extracted_images (document_id, image_path, page_number, width, height, format, ocr_text, created_at) SELECT p0::INTEGER, p1::VARCHAR, p2::INTEGER, p3::INTEGER, p4::INTEGER, p5::VARCHAR, p6::TEXT, p7::TIMESTAMP WITHOUT TIME ZONE FROM (VALU ... 19299 characters truncated ... 6, p7, sen_counter) ORDER BY sen_counter RETURNING extracted_images.id, extracted_images.id AS id__1]
+[parameters: {'height__0': None, 'ocr_text__0': None, 'created_at__0': datetime.datetime(2026, 2, 12, 2, 41, 5, 391280), 'page_number__0': None, 'document_id__0': 3, 'format__0': None, 'width__0': None, 'image_path__0': 'C:\\Users\\jcnaz\\OneDrive\\Documentos\\TRLCodigo\\Github\\TRL\\Backend_TRL\\storage\\temp\\doc_3_images\\1770864059513_TrabajoUIC_Solano_Erick_FINAL_page1_img1.png', 'height__1': None, 'ocr_text__1': None, 'created_at__1': datetime.datetime(2026, 2, 12, 2, 41, 5, 391280), 'page_number__1': None, 'document_id__1': 3, 'format__1': None, 'width__1': None, 'image_path__1': 'C:\\Users\\jcnaz\\OneDrive\\Documentos\\TRLCodigo\\Github\\TRL\\Backend_TRL\\storage\\temp\\doc_3_images\\1770864059513_TrabajoUIC_Solano_Erick_FINAL_page3_img1.jpeg', 'height__2': None, 'ocr_text__2': None, 'created_at__2': datetime.datetime(2026, 2, 12, 2, 41, 5, 391280), 'page_number__2': None, 'document_id__2': 3, 'format__2': None, 'width__2': None, 'image_path__2': 'C:\\Users\\jcnaz\\OneDrive\\Documentos\\TRLCodigo\\Github\\TRL\\Backend_TRL\\storage\\temp\\doc_3_images\\1770864059513_TrabajoUIC_Solano_Erick_FINAL_page4_img1.jpeg', 'height__3': None, 'ocr_text__3': None, 'created_at__3': datetime.datetime(2026, 2, 12, 2, 41, 5, 391280), 'page_number__3': None, 'document_id__3': 3, 'format__3': None, 'width__3': None, 'image_path__3': 'C:\\Users\\jcnaz\\OneDrive\\Documentos\\TRLCodigo\\Github\\TRL\\Backend_TRL\\storage\\temp\\doc_3_images\\1770864059513_TrabajoUIC_Solano_Erick_FINAL_page5_img1.jpeg', 'height__4': None, 'ocr_text__4': None, 'created_at__4': datetime.datetime(2026, 2, 12, 2, 41, 5, 391280), 'page_number__4': None, 'document_id__4': 3, 'format__4': None, 'width__4': None, 'image_path__4': 'C:\\Users\\jcnaz\\OneDrive\\Documentos\\TRLCodigo\\Github\\TRL\\Backend_TRL\\storage\\temp\\doc_3_images\\1770864059513_TrabajoUIC_Solano_Erick_FINAL_page20_img1.png', 'height__5': None, 'ocr_text__5': None, 'created_at__5': datetime.datetime(2026, 2, 12, 2, 41, 5, 391280), 'page_number__5': None, 'document_id__5': 3, 'format__5': None, 'width__5': None, 'image_path__5': 'C:\\Users\\jcnaz\\OneDrive\\Documentos\\TRLCodigo\\Github\\TRL\\Backend_TRL\\storage\\temp\\doc_3_images\\1770864059513_TrabajoUIC_Solano_Erick_FINAL_page22_img1.jpeg', 'height__6': None, 'ocr_text__6': None ... 900 parameters truncated ... 'width__118': None, 'image_path__118': 'C:\\Users\\jcnaz\\OneDrive\\Documentos\\TRLCodigo\\Github\\TRL\\Backend_TRL\\storage\\temp\\doc_3_images\\1770864059513_TrabajoUIC_Solano_Erick_FINAL_page100_img2.jpeg', 'height__119': None, 'ocr_text__119': None, 'created_at__119': datetime.datetime(2026, 2, 12, 2, 41, 5, 391280), 'page_number__119': None, 'document_id__119': 3, 'format__119': None, 'width__119': None, 'image_path__119': 'C:\\Users\\jcnaz\\OneDrive\\Documentos\\TRLCodigo\\Github\\TRL\\Backend_TRL\\storage\\temp\\doc_3_images\\1770864059513_TrabajoUIC_Solano_Erick_FINAL_page100_img3.jpeg', 'height__120': None, 'ocr_text__120': None, 'created_at__120': datetime.datetime(2026, 2, 12, 2, 41, 5, 391280), 'page_number__120': None, 'document_id__120': 3, 'format__120': None, 'width__120': None, 'image_path__120': 'C:\\Users\\jcnaz\\OneDrive\\Documentos\\TRLCodigo\\Github\\TRL\\Backend_TRL\\storage\\temp\\doc_3_images\\1770864059513_TrabajoUIC_Solano_Erick_FINAL_page100_img4.jpeg', 'height__121': None, 'ocr_text__121': None, 'created_at__121': datetime.datetime(2026, 2, 12, 2, 41, 5, 391280), 'page_number__121': None, 'document_id__121': 3, 'format__121': None, 'width__121': None, 'image_path__121': 'C:\\Users\\jcnaz\\OneDrive\\Documentos\\TRLCodigo\\Github\\TRL\\Backend_TRL\\storage\\temp\\doc_3_images\\1770864059513_TrabajoUIC_Solano_Erick_FINAL_page102_img1.jpeg', 'height__122': None, 'ocr_text__122': None, 'created_at__122': datetime.datetime(2026, 2, 12, 2, 41, 5, 391280), 'page_number__122': None, 'document_id__122': 3, 'format__122': None, 'width__122': None, 'image_path__122': 'C:\\Users\\jcnaz\\OneDrive\\Documentos\\TRLCodigo\\Github\\TRL\\Backend_TRL\\storage\\temp\\doc_3_images\\1770864059513_TrabajoUIC_Solano_Erick_FINAL_page102_img2.jpeg', 'height__123': None, 'ocr_text__123': None, 'created_at__123': datetime.datetime(2026, 2, 12, 2, 41, 5, 391280), 'page_number__123': None, 'document_id__123': 3, 'format__123': None, 'width__123': None, 'image_path__123': 'C:\\Users\\jcnaz\\OneDrive\\Documentos\\TRLCodigo\\Github\\TRL\\Backend_TRL\\storage\\temp\\doc_3_images\\1770864059513_TrabajoUIC_Solano_Erick_FINAL_page102_img3.jpeg', 'height__124': None, 'ocr_text__124': None, 'created_at__124': datetime.datetime(2026, 2, 12, 2, 41, 5, 391280), 'page_number__124': None, 'document_id__124': 3, 'format__124': None, 'width__124': None, 'image_path__124': 'C:\\Users\\jcnaz\\OneDrive\\Documentos\\TRLCodigo\\Github\\TRL\\Backend_TRL\\storage\\temp\\doc_3_images\\1770864059513_TrabajoUIC_Solano_Erick_FINAL_page102_img4.jpeg'}]
+(Background on this error at: https://sqlalche.me/e/20/f405)
+2026-02-11 21:44:30 | INFO     | __main__:main:25 - Fase 1: Procesamiento de documento y extracción de recursos...
+2026-02-11 21:44:30 | INFO     | src.storage.database:initialize:28 - Tablas de base de datos verificadas/creadas correctamente
+2026-02-11 21:44:31 | INFO     | __main__:main:30 - Documento procesado con ID interno: 5
+2026-02-11 21:44:31 | INFO     | __main__:main:33 - Fase 2: Iniciando análisis TRL con Google Gemini...
+2026-02-11 21:44:31 | INFO     | src.processors.trl_analyzer:__init__:14 - TRLAnalyzer inicializado con modelo: gemini-2.0-flash
+2026-02-11 21:44:31 | INFO     | src.processors.trl_analyzer:analizar_pdf:55 - Iniciando análisis TRL de: 1770864268932_TrabajoUIC_Solano_Erick_FINAL.pdf
+2026-02-11 21:44:33 | ERROR    | __main__:main:48 - Error durante el procesamiento/análisis: 401 UNAUTHENTICATED. {'error': {'code': 401, 'message': 'API keys are not supported by this API. Expected OAuth2 access token or other authentication credentials that assert a principal. See https://cloud.google.com/docs/authentication', 'status': 'UNAUTHENTICATED', 'details': [{'@type': 'type.googleapis.com/google.rpc.ErrorInfo', 'reason': 'CREDENTIALS_MISSING', 'domain': 'googleapis.com', 'metadata': {'method': 'google.ai.generativelanguage.v1beta.GenerativeService.GenerateContent', 'service': 'generativelanguage.googleapis.com'}}]}}
+Traceback (most recent call last):
+
+  File "C:\Users\jcnaz\OneDrive\Documentos\TRLCodigo\Github\TRL\Backend_TRL\python_scripts\analyze_main.py", line 52, in <module>
+    main()
+    └ <function main at 0x00000218A27C2840>
+
+> File "C:\Users\jcnaz\OneDrive\Documentos\TRLCodigo\Github\TRL\Backend_TRL\python_scripts\analyze_main.py", line 35, in main
+    resultado = analyzer.analizar_pdf(pdf_path)
+                │        │            └ WindowsPath('C:/Users/jcnaz/OneDrive/Documentos/TRLCodigo/Github/TRL/Backend_TRL/storage/uploads/1770864268932_TrabajoUIC_Sol...
+                │        └ <function TRLAnalyzer.analizar_pdf at 0x00000218A890E660>
+                └ <src.processors.trl_analyzer.TRLAnalyzer object at 0x00000218AAAB50D0>
+
+  File "C:\Users\jcnaz\OneDrive\Documentos\TRLCodigo\Github\TRL\Backend_TRL\python_scripts\src\processors\trl_analyzer.py", line 59, in analizar_pdf
+    response = self.client.models.generate_content(
+               │    │      └ <property object at 0x00000218A99498F0>
+               │    └ <google.genai.client.Client object at 0x00000218AAB0B290>
+               └ <src.processors.trl_analyzer.TRLAnalyzer object at 0x00000218AAAB50D0>
+
+  File "C:\Users\jcnaz\AppData\Local\Programs\Python\Python311\Lib\site-packages\google\genai\models.py", line 5474, in generate_content
+    response = self._generate_content(
+               │    └ <function Models._generate_content at 0x00000218A92E0D60>
+               └ <google.genai.models.Models object at 0x00000218AAF0DE90>
+  File "C:\Users\jcnaz\AppData\Local\Programs\Python\Python311\Lib\site-packages\google\genai\models.py", line 4214, in _generate_content
+    response = self._api_client.request(
+               │    │           └ <function BaseApiClient.request at 0x00000218A924CEA0>
+               │    └ <google.genai._api_client.BaseApiClient object at 0x00000218A990EC90>
+               └ <google.genai.models.Models object at 0x00000218AAF0DE90>
+  File "C:\Users\jcnaz\AppData\Local\Programs\Python\Python311\Lib\site-packages\google\genai\_api_client.py", line 1396, in request
+    response = self._request(http_request, http_options, stream=False)
+               │    │        │             └ None
+               │    │        └ HttpRequest(headers={'Content-Type': 'application/json', 'x-goog-api-key': 'AQ.Ab8RN6L_zoflfl5-DVqNjTZL8p5rPyyTTb1HltIuIo75WL...
+               │    └ <function BaseApiClient._request at 0x00000218A924CC20>
+               └ <google.genai._api_client.BaseApiClient object at 0x00000218A990EC90>
+  File "C:\Users\jcnaz\AppData\Local\Programs\Python\Python311\Lib\site-packages\google\genai\_api_client.py", line 1232, in _request
+    return self._retry(self._request_once, http_request, stream)  # type: ignore[no-any-return]
+           │    │      │    │              │             └ False
+           │    │      │    │              └ HttpRequest(headers={'Content-Type': 'application/json', 'x-goog-api-key': 'AQ.Ab8RN6L_zoflfl5-DVqNjTZL8p5rPyyTTb1HltIuIo75WL...
+           │    │      │    └ <function BaseApiClient._request_once at 0x00000218A924CB80>
+           │    │      └ <google.genai._api_client.BaseApiClient object at 0x00000218A990EC90>
+           │    └ <Retrying object at 0x218aaf0ef50 (stop=<tenacity.stop.stop_after_attempt object at 0x00000218AAF10550>, wait=<tenacity.wait....
+           └ <google.genai._api_client.BaseApiClient object at 0x00000218A990EC90>
+  File "C:\Users\jcnaz\AppData\Local\Programs\Python\Python311\Lib\site-packages\tenacity\__init__.py", line 470, in __call__
+    do = self.iter(retry_state=retry_state)
+         │    │                └ <RetryCallState 2304966344080: attempt #1; slept for 0.0; last result: failed (ClientError 401 UNAUTHENTICATED. {'error': {'c...
+         │    └ <function BaseRetrying.iter at 0x00000218A91BFC40>
+         └ <Retrying object at 0x218aaf0ef50 (stop=<tenacity.stop.stop_after_attempt object at 0x00000218AAF10550>, wait=<tenacity.wait....
+  File "C:\Users\jcnaz\AppData\Local\Programs\Python\Python311\Lib\site-packages\tenacity\__init__.py", line 371, in iter
+    result = action(retry_state)
+             │      └ <RetryCallState 2304966344080: attempt #1; slept for 0.0; last result: failed (ClientError 401 UNAUTHENTICATED. {'error': {'c...
+             └ <function BaseRetrying._post_stop_check_actions.<locals>.exc_check at 0x00000218AAF347C0>
+  File "C:\Users\jcnaz\AppData\Local\Programs\Python\Python311\Lib\site-packages\tenacity\__init__.py", line 413, in exc_check
+    raise retry_exc.reraise()
+          │         └ <function RetryError.reraise at 0x00000218A91BF1A0>
+          └ RetryError(<Future at 0x218aaf13590 state=finished raised ClientError>)
+  File "C:\Users\jcnaz\AppData\Local\Programs\Python\Python311\Lib\site-packages\tenacity\__init__.py", line 184, in reraise
+    raise self.last_attempt.result()
+          │    │            └ <function Future.result at 0x00000218A2EF2980>
+          │    └ <Future at 0x218aaf13590 state=finished raised ClientError>
+          └ RetryError(<Future at 0x218aaf13590 state=finished raised ClientError>)
+  File "C:\Users\jcnaz\AppData\Local\Programs\Python\Python311\Lib\concurrent\futures\_base.py", line 449, in result
+    return self.__get_result()
+           └ None
+  File "C:\Users\jcnaz\AppData\Local\Programs\Python\Python311\Lib\concurrent\futures\_base.py", line 401, in __get_result
+    raise self._exception
+          └ None
+  File "C:\Users\jcnaz\AppData\Local\Programs\Python\Python311\Lib\site-packages\tenacity\__init__.py", line 473, in __call__
+    result = fn(*args, **kwargs)
+             │   │       └ {}
+             │   └ (HttpRequest(headers={'Content-Type': 'application/json', 'x-goog-api-key': 'AQ.Ab8RN6L_zoflfl5-DVqNjTZL8p5rPyyTTb1HltIuIo75W...
+             └ <bound method BaseApiClient._request_once of <google.genai._api_client.BaseApiClient object at 0x00000218A990EC90>>
+  File "C:\Users\jcnaz\AppData\Local\Programs\Python\Python311\Lib\site-packages\google\genai\_api_client.py", line 1209, in _request_once
+    errors.APIError.raise_for_response(response)
+    │      │        │                  └ <Response [401 Unauthorized]>
+    │      │        └ <classmethod(<function APIError.raise_for_response at 0x00000218A91CE840>)>
+    │      └ <class 'google.genai.errors.APIError'>
+    └ <module 'google.genai.errors' from 'C:\\Users\\jcnaz\\AppData\\Local\\Programs\\Python\\Python311\\Lib\\site-packages\\google...
+  File "C:\Users\jcnaz\AppData\Local\Programs\Python\Python311\Lib\site-packages\google\genai\errors.py", line 134, in raise_for_response
+    cls.raise_error(response.status_code, response_json, response)
+    │   │           │        │            │              └ <Response [401 Unauthorized]>
+    │   │           │        │            └ {'error': {'code': 401, 'message': 'API keys are not supported by this API. Expected OAuth2 access token or other authenticat...
+    │   │           │        └ 401
+    │   │           └ <Response [401 Unauthorized]>
+    │   └ <classmethod(<function APIError.raise_error at 0x00000218A91CE980>)>
+    └ <class 'google.genai.errors.APIError'>
+  File "C:\Users\jcnaz\AppData\Local\Programs\Python\Python311\Lib\site-packages\google\genai\errors.py", line 159, in raise_error
+    raise ClientError(status_code, response_json, response)
+          │           │            │              └ <Response [401 Unauthorized]>
+          │           │            └ {'error': {'code': 401, 'message': 'API keys are not supported by this API. Expected OAuth2 access token or other authenticat...
+          │           └ 401
+          └ <class 'google.genai.errors.ClientError'>
+
+google.genai.errors.ClientError: 401 UNAUTHENTICATED. {'error': {'code': 401, 'message': 'API keys are not supported by this API. Expected OAuth2 access token or other authentication credentials that assert a principal. See https://cloud.google.com/docs/authentication', 'status': 'UNAUTHENTICATED', 'details': [{'@type': 'type.googleapis.com/google.rpc.ErrorInfo', 'reason': 'CREDENTIALS_MISSING', 'domain': 'googleapis.com', 'metadata': {'method': 'google.ai.generativelanguage.v1beta.GenerativeService.GenerateContent', 'service': 'generativelanguage.googleapis.com'}}]}}
+2026-02-11 21:50:13 | INFO     | __main__:main:25 - Fase 1: Procesamiento de documento y extracción de recursos...
+2026-02-11 21:50:13 | INFO     | src.storage.database:initialize:28 - Tablas de base de datos verificadas/creadas correctamente
+2026-02-11 21:50:13 | INFO     | __main__:main:30 - Documento procesado con ID interno: 7
+2026-02-11 21:50:13 | INFO     | __main__:main:33 - Fase 2: Iniciando análisis TRL con Google Gemini...
+2026-02-11 21:50:13 | INFO     | src.processors.trl_analyzer:__init__:16 - Configurando para Vertex AI: tesis-475602 en us-central1
+2026-02-11 21:50:13 | INFO     | src.processors.trl_analyzer:__init__:33 - TRLAnalyzer inicializado con modelo: gemini-2.0-flash
+2026-02-11 21:50:13 | INFO     | src.processors.trl_analyzer:analizar_pdf:77 - Iniciando análisis TRL de: 1770864611306_TrabajoUIC_Solano_Erick_FINAL.pdf
+2026-02-11 21:50:39 | INFO     | __main__:main:41 - SUCCESS: Análisis completado. Resultado en: C:\Users\jcnaz\OneDrive\Documentos\TRLCodigo\Github\TRL\Backend_TRL\storage\analysis\analisis_7.txt
+2026-02-11 22:53:14 | INFO     | __main__:main:27 - Iniciando análisis global para el Proyecto ID: 1
+2026-02-11 22:53:15 | INFO     | __main__:main:38 - Se encontraron 8 evidencias para procesar.
+2026-02-11 22:53:15 | INFO     | src.processors.trl_analyzer:__init__:16 - Configurando para Vertex AI: tesis-475602 en us-central1
+2026-02-11 22:53:15 | INFO     | src.processors.trl_analyzer:__init__:33 - TRLAnalyzer inicializado con modelo: gemini-2.0-flash
+2026-02-11 22:53:15 | INFO     | __main__:main:66 - Procesando evidencia: TrabajoUIC_Solano_Erick_FINAL.pdf (application/pdf)
+2026-02-11 22:53:15 | ERROR    | __main__:main:92 - Error durante el análisis del proyecto: 1 validation error for Blob
+data
+  Input should be a valid bytes [type=bytes_type, input_value=<memory at 0x00000228F9F999C0>, input_type=memoryview]
+    For further information visit https://errors.pydantic.dev/2.12/v/bytes_type
+Traceback (most recent call last):
+
+  File "C:\Users\jcnaz\OneDrive\Documentos\TRLCodigo\Github\TRL\Backend_TRL\python_scripts\analyze_project.py", line 100, in <module>
+    main()
+    └ <function main at 0x00000228F2E02840>
+
+> File "C:\Users\jcnaz\OneDrive\Documentos\TRLCodigo\Github\TRL\Backend_TRL\python_scripts\analyze_project.py", line 70, in main
+    gemini_contents.append(types.Part.from_bytes(data=datos, mime_type="application/pdf"))
+    │               │      │     │    │               └ <memory at 0x00000228F9F999C0>
+    │               │      │     │    └ <classmethod(<function Part.from_bytes at 0x00000228F900A160>)>
+    │               │      │     └ <class 'google.genai.types.Part'>
+    │               │      └ <module 'google.genai.types' from 'C:\\Users\\jcnaz\\AppData\\Local\\Programs\\Python\\Python311\\Lib\\site-packages\\google\...
+    │               └ <method 'append' of 'list' objects>
+    └ ['\nActúa como un evaluador experto de madurez tecnológica (TRL).\nAnaliza todas las evidencias adjuntas correspondientes al ...
+
+  File "C:\Users\jcnaz\AppData\Local\Programs\Python\Python311\Lib\site-packages\google\genai\types.py", line 1737, in from_bytes
+    inline_data = Blob(
+                  └ <class 'google.genai.types.Blob'>
+  File "C:\Users\jcnaz\AppData\Local\Programs\Python\Python311\Lib\site-packages\pydantic\main.py", line 250, in __init__
+    validated_self = self.__pydantic_validator__.validate_python(data, self_instance=self)
+                     │    │                      │               │                   └ Blob()
+                     │    │                      │               └ {'data': <memory at 0x00000228F9F999C0>, 'mime_type': 'application/pdf'}
+                     │    │                      └ <method 'validate_python' of 'pydantic_core._pydantic_core.SchemaValidator' objects>
+                     │    └ SchemaValidator(title="Blob", validator=Model(
+                     │          ModelValidator {
+                     │              revalidate: Never,
+                     │              validator: FunctionBef...
+                     └ Blob()
+
+pydantic_core._pydantic_core.ValidationError: 1 validation error for Blob
+data
+  Input should be a valid bytes [type=bytes_type, input_value=<memory at 0x00000228F9F999C0>, input_type=memoryview]
+    For further information visit https://errors.pydantic.dev/2.12/v/bytes_type
+2026-02-11 22:56:05 | INFO     | __main__:main:27 - Iniciando análisis global para el Proyecto ID: 1
+2026-02-11 22:56:05 | INFO     | __main__:main:38 - Se encontraron 8 evidencias para procesar.
+2026-02-11 22:56:05 | INFO     | src.processors.trl_analyzer:__init__:16 - Configurando para Vertex AI: tesis-475602 en us-central1
+2026-02-11 22:56:05 | INFO     | src.processors.trl_analyzer:__init__:33 - TRLAnalyzer inicializado con modelo: gemini-2.0-flash
+2026-02-11 22:56:05 | INFO     | __main__:main:68 - Procesando evidencia: TrabajoUIC_Solano_Erick_FINAL.pdf (application/pdf)
+2026-02-11 22:56:05 | INFO     | __main__:main:68 - Procesando evidencia: 0_PROYECTO FIRMAS.pdf (application/pdf)
+2026-02-11 22:56:05 | INFO     | __main__:main:68 - Procesando evidencia: 1.cuatrimestre_1.pdf (application/pdf)
+2026-02-11 22:56:05 | INFO     | __main__:main:68 - Procesando evidencia: 3.cuatrimestre_3.pdf (application/pdf)
+2026-02-11 22:56:05 | INFO     | __main__:main:68 - Procesando evidencia: CASCO TÁCTICO MILITAR (1).pdf (application/pdf)
+2026-02-11 22:56:05 | INFO     | __main__:main:68 - Procesando evidencia: Escrito_Tasinchano_Zhispon (1) (1).pdf (application/pdf)
+2026-02-11 22:56:05 | INFO     | __main__:main:68 - Procesando evidencia: Memorando Nro. ESPE-CIAM-2026-0029-M.pdf (application/pdf)
+2026-02-11 22:56:05 | INFO     | __main__:main:68 - Procesando evidencia: resoluciÓn_espe-ca-res-2022-019-signed (1).pdf (application/pdf)
+2026-02-11 22:56:05 | INFO     | __main__:main:81 - Enviando conjunto de evidencias a Google Gemini...
+2026-02-11 22:56:05 | ERROR    | __main__:main:94 - Error durante el análisis del proyecto: 'TRLAnalyzer' object has no attribute 'MODEL_ID'
+Traceback (most recent call last):
+
+  File "C:\Users\jcnaz\OneDrive\Documentos\TRLCodigo\Github\TRL\Backend_TRL\python_scripts\analyze_project.py", line 102, in <module>
+    main()
+    └ <function main at 0x000002B0F81F2840>
+
+> File "C:\Users\jcnaz\OneDrive\Documentos\TRLCodigo\Github\TRL\Backend_TRL\python_scripts\analyze_project.py", line 83, in main
+    model=analyzer.MODEL_ID,
+          └ <src.processors.trl_analyzer.TRLAnalyzer object at 0x000002B0FF4AE4D0>
+
+AttributeError: 'TRLAnalyzer' object has no attribute 'MODEL_ID'
+2026-02-11 22:57:54 | INFO     | __main__:main:27 - Iniciando análisis global para el Proyecto ID: 1
+2026-02-11 22:57:54 | INFO     | __main__:main:38 - Se encontraron 8 evidencias para procesar.
+2026-02-11 22:57:54 | INFO     | src.processors.trl_analyzer:__init__:16 - Configurando para Vertex AI: tesis-475602 en us-central1
+2026-02-11 22:57:55 | INFO     | src.processors.trl_analyzer:__init__:34 - TRLAnalyzer inicializado con modelo: gemini-2.0-flash
+2026-02-11 22:57:55 | INFO     | __main__:main:68 - Procesando evidencia: TrabajoUIC_Solano_Erick_FINAL.pdf (application/pdf)
+2026-02-11 22:57:55 | INFO     | __main__:main:68 - Procesando evidencia: 0_PROYECTO FIRMAS.pdf (application/pdf)
+2026-02-11 22:57:55 | INFO     | __main__:main:68 - Procesando evidencia: 1.cuatrimestre_1.pdf (application/pdf)
+2026-02-11 22:57:55 | INFO     | __main__:main:68 - Procesando evidencia: 3.cuatrimestre_3.pdf (application/pdf)
+2026-02-11 22:57:55 | INFO     | __main__:main:68 - Procesando evidencia: CASCO TÁCTICO MILITAR (1).pdf (application/pdf)
+2026-02-11 22:57:55 | INFO     | __main__:main:68 - Procesando evidencia: Escrito_Tasinchano_Zhispon (1) (1).pdf (application/pdf)
+2026-02-11 22:57:55 | INFO     | __main__:main:68 - Procesando evidencia: Memorando Nro. ESPE-CIAM-2026-0029-M.pdf (application/pdf)
+2026-02-11 22:57:55 | INFO     | __main__:main:68 - Procesando evidencia: resoluciÓn_espe-ca-res-2022-019-signed (1).pdf (application/pdf)
+2026-02-11 22:57:55 | INFO     | __main__:main:81 - Enviando conjunto de evidencias a Google Gemini...
+2026-02-11 22:58:29 | INFO     | __main__:main:91 - SUCCESS: Análisis de proyecto completado. Resultado en: C:\Users\jcnaz\OneDrive\Documentos\TRLCodigo\Github\TRL\Backend_TRL\storage\analysis\analisis_proyecto_1.txt
+2026-02-11 23:11:58 | INFO     | __main__:main:27 - Iniciando análisis global para el Proyecto ID: 1
+2026-02-11 23:11:58 | INFO     | __main__:main:38 - Se encontraron 8 evidencias para procesar.
+2026-02-11 23:11:58 | INFO     | src.processors.trl_analyzer:__init__:16 - Configurando para Vertex AI: tesis-475602 en us-central1
+2026-02-11 23:11:58 | INFO     | src.processors.trl_analyzer:__init__:34 - TRLAnalyzer inicializado con modelo: gemini-2.0-flash
+2026-02-11 23:11:58 | INFO     | __main__:main:68 - Procesando evidencia: TrabajoUIC_Solano_Erick_FINAL.pdf (application/pdf)
+2026-02-11 23:11:58 | INFO     | __main__:main:68 - Procesando evidencia: 0_PROYECTO FIRMAS.pdf (application/pdf)
+2026-02-11 23:11:58 | INFO     | __main__:main:68 - Procesando evidencia: 1.cuatrimestre_1.pdf (application/pdf)
+2026-02-11 23:11:58 | INFO     | __main__:main:68 - Procesando evidencia: 3.cuatrimestre_3.pdf (application/pdf)
+2026-02-11 23:11:58 | INFO     | __main__:main:68 - Procesando evidencia: CASCO TÁCTICO MILITAR (1).pdf (application/pdf)
+2026-02-11 23:11:58 | INFO     | __main__:main:68 - Procesando evidencia: Escrito_Tasinchano_Zhispon (1) (1).pdf (application/pdf)
+2026-02-11 23:11:58 | INFO     | __main__:main:68 - Procesando evidencia: Memorando Nro. ESPE-CIAM-2026-0029-M.pdf (application/pdf)
+2026-02-11 23:11:58 | INFO     | __main__:main:68 - Procesando evidencia: resoluciÓn_espe-ca-res-2022-019-signed (1).pdf (application/pdf)
+2026-02-11 23:11:58 | INFO     | __main__:main:81 - Enviando conjunto de evidencias a Google Gemini...
+2026-02-11 23:12:34 | ERROR    | __main__:main:175 - Error durante el análisis del proyecto: Character "•" at index 0 in text is outside the range of characters supported by the font used: "helvetica". Please consider using a Unicode font.
+Traceback (most recent call last):
+
+  File "C:\Users\jcnaz\AppData\Local\Programs\Python\Python311\Lib\site-packages\fpdf\fpdf.py", line 5257, in normalize_text
+    return text.encode(self.core_fonts_encoding).decode("latin-1")
+           │    │      │    └ 'latin-1'
+           │    │      └ <__main__.main.<locals>.TRLReport object at 0x000001C29CC7B3D0>
+           │    └ <method 'encode' of 'str' objects>
+           └ '• TRL 1:'
+
+UnicodeEncodeError: 'latin-1' codec can't encode character '\u2022' in position 0: ordinal not in range(256)
+
+
+The above exception was the direct cause of the following exception:
+
+
+Traceback (most recent call last):
+
+  File "C:\Users\jcnaz\OneDrive\Documentos\TRLCodigo\Github\TRL\Backend_TRL\python_scripts\analyze_project.py", line 183, in <module>
+    main()
+    └ <function main at 0x000001C292DB27A0>
+
+> File "C:\Users\jcnaz\OneDrive\Documentos\TRLCodigo\Github\TRL\Backend_TRL\python_scripts\analyze_project.py", line 163, in main
+    pdf.multi_cell(0, 6, f'• {clean_item}')
+    │   └ <function FPDF.multi_cell at 0x000001C29CB4F2E0>
+    └ <__main__.main.<locals>.TRLReport object at 0x000001C29CC7B3D0>
+
+  File "C:\Users\jcnaz\AppData\Local\Programs\Python\Python311\Lib\site-packages\fpdf\fpdf.py", line 242, in wrapper
+    return fn(self, *args, **kwargs)
+           │  │      │       └ {}
+           │  │      └ (0, 6, '• TRL 1:')
+           │  └ <__main__.main.<locals>.TRLReport object at 0x000001C29CC7B3D0>
+           └ <function FPDF.multi_cell at 0x000001C29CB4F240>
+  File "C:\Users\jcnaz\AppData\Local\Programs\Python\Python311\Lib\site-packages\fpdf\deprecation.py", line 32, in wrapper
+    return fn(self, *args, **kwargs)
+           │  │      │       └ {}
+           │  │      └ (0, 6, '• TRL 1:')
+           │  └ <__main__.main.<locals>.TRLReport object at 0x000001C29CC7B3D0>
+           └ <function FPDF.multi_cell at 0x000001C29CB4F1A0>
+  File "C:\Users\jcnaz\AppData\Local\Programs\Python\Python311\Lib\site-packages\fpdf\fpdf.py", line 4525, in multi_cell
+    text = self.normalize_text(text)
+           │    │              └ '• TRL 1:'
+           │    └ <function FPDF.normalize_text at 0x000001C29CB50220>
+           └ <__main__.main.<locals>.TRLReport object at 0x000001C29CC7B3D0>
+  File "C:\Users\jcnaz\AppData\Local\Programs\Python\Python311\Lib\site-packages\fpdf\fpdf.py", line 5259, in normalize_text
+    raise FPDFUnicodeEncodingException(
+          └ <class 'fpdf.errors.FPDFUnicodeEncodingException'>
+
+fpdf.errors.FPDFUnicodeEncodingException: Character "•" at index 0 in text is outside the range of characters supported by the font used: "helvetica". Please consider using a Unicode font.
+2026-02-11 23:15:48 | INFO     | __main__:main:27 - Iniciando análisis global para el Proyecto ID: 1
+2026-02-11 23:15:48 | INFO     | __main__:main:38 - Se encontraron 8 evidencias para procesar.
+2026-02-11 23:15:48 | INFO     | src.processors.trl_analyzer:__init__:16 - Configurando para Vertex AI: tesis-475602 en us-central1
+2026-02-11 23:15:48 | INFO     | src.processors.trl_analyzer:__init__:34 - TRLAnalyzer inicializado con modelo: gemini-2.0-flash
+2026-02-11 23:15:48 | INFO     | __main__:main:68 - Procesando evidencia: TrabajoUIC_Solano_Erick_FINAL.pdf (application/pdf)
+2026-02-11 23:15:48 | INFO     | __main__:main:68 - Procesando evidencia: 0_PROYECTO FIRMAS.pdf (application/pdf)
+2026-02-11 23:15:48 | INFO     | __main__:main:68 - Procesando evidencia: 1.cuatrimestre_1.pdf (application/pdf)
+2026-02-11 23:15:48 | INFO     | __main__:main:68 - Procesando evidencia: 3.cuatrimestre_3.pdf (application/pdf)
+2026-02-11 23:15:48 | INFO     | __main__:main:68 - Procesando evidencia: CASCO TÁCTICO MILITAR (1).pdf (application/pdf)
+2026-02-11 23:15:48 | INFO     | __main__:main:68 - Procesando evidencia: Escrito_Tasinchano_Zhispon (1) (1).pdf (application/pdf)
+2026-02-11 23:15:48 | INFO     | __main__:main:68 - Procesando evidencia: Memorando Nro. ESPE-CIAM-2026-0029-M.pdf (application/pdf)
+2026-02-11 23:15:48 | INFO     | __main__:main:68 - Procesando evidencia: resoluciÓn_espe-ca-res-2022-019-signed (1).pdf (application/pdf)
+2026-02-11 23:15:48 | INFO     | __main__:main:81 - Enviando conjunto de evidencias a Google Gemini...
+2026-02-11 23:16:20 | INFO     | __main__:main:175 - SUCCESS: Análisis de proyecto completado. Informe PDF generado en: C:\Users\jcnaz\OneDrive\Documentos\TRLCodigo\Github\TRL\Backend_TRL\storage\analysis\analisis_proyecto_1.pdf

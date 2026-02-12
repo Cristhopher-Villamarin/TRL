@@ -20,6 +20,7 @@ export default function ProjectDetail() {
     const [selectedFile, setSelectedFile] = useState<File | null>(null);
     const [descripcion, setDescripcion] = useState('');
     const [estadoEvidencia, setEstadoEvidencia] = useState('Activa');
+    const [analyzing, setAnalyzing] = useState(false);
 
     useEffect(() => {
         if (id) {
@@ -27,6 +28,21 @@ export default function ProjectDetail() {
             fetchEvidencias(parseInt(id));
         }
     }, [id]);
+
+    const handleAnalyzeProject = async () => {
+        if (!proyecto) return;
+
+        setAnalyzing(true);
+        setError('');
+        try {
+            const message = await proyectoService.analizarProyecto(proyecto.idProyecto);
+            alert(message);
+        } catch (err: any) {
+            setError(err.response?.data || 'Error al iniciar el análisis');
+        } finally {
+            setAnalyzing(false);
+        }
+    };
 
     const fetchProyecto = async (projectId: number) => {
         try {
@@ -185,6 +201,21 @@ export default function ProjectDetail() {
                         <h1>{proyecto.nombreProyecto}</h1>
                     </div>
                     <div className="header-actions">
+                        <button
+                            onClick={handleAnalyzeProject}
+                            className={`analyze-button ${analyzing ? 'analyzing' : ''}`}
+                            disabled={analyzing}
+                        >
+                            {analyzing ? (
+                                <div className="spinner-small"></div>
+                            ) : (
+                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+                                    <path d="M21 12a9 9 0 1 1-9-9c2.52 0 4.93 1 6.74 2.74L21 8" strokeLinecap="round" strokeLinejoin="round" />
+                                    <path d="M21 3v5h-5" strokeLinecap="round" strokeLinejoin="round" />
+                                </svg>
+                            )}
+                            {analyzing ? 'Analizando...' : 'Analizar con IA'}
+                        </button>
                         <button onClick={handleDelete} className="delete-button">
                             <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
                                 <path d="M6 19C6 20.1 6.9 21 8 21H16C17.1 21 18 20.1 18 19V7H6V19ZM19 4H15.5L14.5 3H9.5L8.5 4H5V6H19V4Z" fill="currentColor" />
@@ -379,6 +410,7 @@ export default function ProjectDetail() {
                                             </div>
                                             <div className="evidencia-info">
                                                 <h4>{evidencia.descripcion}</h4>
+                                                <p className="evidencia-filename">{evidencia.archivoNombre}</p>
                                                 <p className="evidencia-date">
                                                     Subido: {new Date(evidencia.fechaCarga).toLocaleDateString('es-ES')}
                                                 </p>
@@ -387,16 +419,15 @@ export default function ProjectDetail() {
                                                 </span>
                                             </div>
                                             <div className="evidencia-actions">
-                                                <a
-                                                    href={evidencia.url}
-                                                    target="_blank"
-                                                    rel="noopener noreferrer"
+                                                <button
+                                                    onClick={() => evidenciaService.downloadEvidencia(evidencia.idEvidencia, evidencia.archivoNombre)}
                                                     className="view-button"
+                                                    title="Descargar evidencia"
                                                 >
-                                                    <svg width="18" height="18" viewBox="0 0 20 20" fill="none">
-                                                        <path d="M10 3C5 3 1.73 7.11 1 10C1.73 12.89 5 17 10 17C15 17 18.27 12.89 19 10C18.27 7.11 15 3 10 3ZM10 15C7.24 15 5 12.76 5 10C5 7.24 7.24 5 10 5C12.76 5 15 7.24 15 10C15 12.76 12.76 15 10 15ZM10 7C8.34 7 7 8.34 7 10C7 11.66 8.34 13 10 13C11.66 13 13 11.66 13 10C13 8.34 11.66 7 10 7Z" fill="currentColor" />
+                                                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+                                                        <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v4M7 10l5 5 5-5M12 15V3" strokeLinecap="round" strokeLinejoin="round" />
                                                     </svg>
-                                                </a>
+                                                </button>
                                                 <button
                                                     onClick={() => handleDeleteEvidencia(evidencia.idEvidencia)}
                                                     className="delete-evidence-button"

@@ -23,8 +23,15 @@ public class Evidencia {
     @JoinColumn(name = "idproyecto", nullable = false)
     private Proyecto proyecto;
 
-    @Column(name = "url", nullable = false)
-    private String url;
+    @Column(name = "archivo_nombre", nullable = false)
+    private String archivoNombre;
+
+    @Column(name = "archivo_tipo")
+    private String archivoTipo;
+
+    @Column(name = "archivo_datos")
+    @org.hibernate.annotations.JdbcTypeCode(org.hibernate.type.SqlTypes.BINARY)
+    private byte[] archivoDatos;
 
     @Column(name = "descripcion", nullable = false)
     private String descripcion;

@@ -1,0 +1,70 @@
+**INFORME DE EVALUACIÓN DE MADUREZ TECNOLÓGICA (TRL)**
+
+**Título del Proyecto:** Desarrollo y validación de un método de reparación para cascos tácticos militares
+
+**Fecha de Evaluación:** 2024-05-16
+
+**Evaluador:** Asistente IA
+
+**1. Determinación del Tipo de Documento:**
+
+El documento presenta una investigación para el desarrollo y validación de un método de reparación para cascos tácticos militares, lo cual lo clasifica como un documento tecnológico.
+
+**2. Identificación de Evidencias:**
+
+A continuación, se detallan las evidencias encontradas en el documento, clasificadas por nivel TRL, junto con su respectivo puntaje y justificación:
+
+*   **TRL 1**
+
+    *   **Referencias bibliográficas (>10):** El documento incluye una sección de bibliografía con más de 10 referencias que respaldan la investigación. (10 puntos)
+    *   **Documentación técnica del principio:** El documento describe conceptos de materiales compuestos, análisis de tensiones, teorías de comportamiento de sistemas multicapa y mecanismos de absorción de energía. (5 puntos)
+    *   **Publicación en Scopus (Q3–Q4):** Se encuentran referencias a revistas indexadas en Scopus, aunque no se explicita el cuartil. (15 puntos)
+*   **TRL 2**
+
+    *   **Relación con necesidad institucional/nacional:** El documento menciona la necesidad de las Fuerzas Armadas del Ecuador de contar con métodos de reparación para cascos tácticos. (10 puntos)
+    *   **Documento de formulación del concepto:** El documento explica el método de reparación basado en la selección del casco, evaluación de daños y ejecución del procedimiento. (10 puntos)
+*   **TRL 3**
+
+    *   **Prototipo funcional en laboratorio:** Se menciona la fabricación de probetas planas de fibra de kevlar 49 con diferentes matrices y configuraciones. (10 puntos)
+    *   **Registro de pruebas (bitácora validada):** Se menciona pruebas balísticas a probetas planas de fibra de kevlar 49 con matrices de diferente tipo, configuración de apilamiento de capas (5 puntos)
+*   **TRL 4**
+
+    *   No se identifican evidencias concretas para este nivel.
+*   **TRL 5**
+
+    *   No se identifican evidencias concretas para este nivel.
+*    **TRL 6**
+
+    *   No se identifican evidencias concretas para este nivel.
+*    **TRL 7**
+
+    *   No se identifican evidencias concretas para este nivel.
+*   **TRL 8**
+
+    *   No se identifican evidencias concretas para este nivel.
+*   **TRL 9**
+
+    *   No se identifican evidencias concretas para este nivel.
+
+**3. Evaluación TRL Nivel por Nivel:**
+
+*   **TRL 1:** El puntaje total es de 40 puntos (10 + 15+15). **CUMPLE** con el puntaje mínimo de 40.
+*   **TRL 2:** El puntaje total es de 20 puntos (10+10). **NO CUMPLE** con el puntaje mínimo de 75.
+*   **TRL 3:** El puntaje total es de 15 puntos (10+5). **NO CUMPLE** con el puntaje mínimo de 95.
+*   **TRL 4:** No se identificaron evidencias.
+*   **TRL 5:** No se identificaron evidencias.
+*   **TRL 6:** No se identificaron evidencias.
+*   **TRL 7:** No se identificaron evidencias.
+*   **TRL 8:** No se identificaron evidencias.
+*   **TRL 9:** No se identificaron evidencias.
+
+**4. Determinación del TRL Real:**
+
+El TRL real del proyecto es **TRL 1**. Aunque se fabricaron probetas (TRL 3), no se alcanzan los puntajes mínimos requeridos para considerar validados los TRLs superiores, por lo que el TRL real es TRL 1.
+
+**5. Recomendaciones para Avanzar:**
+
+*   **TRL 2:** Es necesario fortalecer la formulación del concepto del método de reparación. Se debe buscar la validación de pares académicos y fortalecer la relación con la necesidad institucional/nacional.
+*   **TRL 3:** Realizar simulaciones de los materiales que componen el prototipo, mantener registro detallado de las pruebas de laboratorio y obtener la validación de expertos.
+*   **TRL 4-9:** Para avanzar a los siguientes niveles de TRL, es fundamental realizar pruebas en entornos relevantes (TRL 4 y 5), construir un prototipo del sistema completo (TRL 6), y demostrar la operación del sistema en su entorno final (TRL 7, 8 y 9). Esto implica pruebas de campo, validación con usuarios finales y análisis de costos.
+*   **Publicaciones:** Buscar publicaciones en revistas indexadas de alto impacto (Scopus Q1-Q2) para aumentar la visibilidad y el reconocimiento del trabajo.

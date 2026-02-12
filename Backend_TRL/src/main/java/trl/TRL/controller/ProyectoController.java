@@ -66,4 +66,21 @@ public class ProyectoController {
             return ResponseEntity.badRequest().body(e.getMessage());
         }
     }
+
+    private final trl.TRL.service.PythonIntegrationService pythonService;
+
+    @PostMapping("/{id}/analizar")
+    public ResponseEntity<?> analizarProyecto(@PathVariable Integer id) {
+        try {
+            boolean success = pythonService.executeProjectAnalysis(id);
+            if (success) {
+                return ResponseEntity
+                        .ok("Análisis iniciado correctamente. El resultado se guardará en storage/analysis.");
+            } else {
+                return ResponseEntity.internalServerError().body("Error al ejecutar el análisis.");
+            }
+        } catch (Exception e) {
+            return ResponseEntity.badRequest().body(e.getMessage());
+        }
+    }
 }

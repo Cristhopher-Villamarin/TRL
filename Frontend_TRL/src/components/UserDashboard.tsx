@@ -89,14 +89,18 @@ export default function UserDashboard() {
                             <p>Ver todos mis proyectos</p>
                         </button>
 
-                        <button className="action-card">
-                            <div className="action-icon">
-                                <svg width="32" height="32" viewBox="0 0 24 24" fill="none">
-                                    <path d="M14 2H6C4.9 2 4 2.9 4 4V20C4 21.1 4.89 22 5.99 22H18C19.1 22 20 21.1 20 20V8L14 2ZM16 18H8V16H16V18ZM16 14H8V12H16V14ZM13 9V3.5L18.5 9H13Z" fill="currentColor" />
+                        <button className="action-card" onClick={() => navigate('/usuario/reportes-trl')}>
+                            <div className="action-icon" style={{ background: 'rgba(99, 102, 241, 0.1)', color: '#6366f1' }}>
+                                <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+                                    <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z" />
+                                    <polyline points="14 2 14 8 20 8" />
+                                    <line x1="16" y1="13" x2="8" y2="13" />
+                                    <line x1="16" y1="17" x2="8" y2="17" />
+                                    <polyline points="10 9 9 9 8 9" />
                                 </svg>
                             </div>
-                            <h3>Reportes</h3>
-                            <p>Ver mis reportes TRL</p>
+                            <h3>Reportes TRL</h3>
+                            <p>Historial de análisis y diagnósticos PDF</p>
                         </button>
                     </div>
                 </div>
